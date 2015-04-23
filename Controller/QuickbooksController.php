@@ -12,7 +12,8 @@ class QuickbooksController extends AppController {
 	
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->response->type(array('plain' => 'text/plain', 'xml' => 'text/xml'));
+		//$this->response->type(array('plain' => 'text/plain', 'xml' => 'text/xml'));
+		$this->response->type(array('xml' => 'text/xml'));
 	}
 	
 	public function quickbooks_web_connector() {
@@ -36,6 +37,9 @@ class QuickbooksController extends AppController {
 	}
 
 	public function quickbooks_customer_add_request($requestID, $user, $action, $ID, $extra, &$err, $last_action_time, $last_actionident_time, $version, $locale) {
+		$this->layout = false;
+		Configure::write('debug', 0);
+		
 		// Obtain the Customer from information from the Customer Model.
 		$result = $this->Customer->getQuickbooksFormated($ID);
 		if(!empty($result)) {
@@ -66,11 +70,10 @@ class QuickbooksController extends AppController {
 			</QBXML>';
 		}
 		
-		return $qbxml;
 		// Set the response Content-Type to plain.
-		#$this->response->type('xml');
-		#$this->response->body($qbxml);
-		#return $this->response;
+		$this->response->type('xml');
+		$this->response->body($qbxml);
+		return $this->response;
 	}
 	
 	public function quickbooks_customer_add_response($requestID, $user, $action, $ID, $extra, &$err, $last_action_time, $last_actionident_time, $xml, $idents) {
