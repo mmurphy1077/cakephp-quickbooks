@@ -13,7 +13,7 @@ class QuickbooksController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		//$this->response->type(array('plain' => 'text/plain', 'xml' => 'text/xml'));
-		$this->response->type(array('xml' => 'text/xml'));
+		//$this->response->type(array('xml' => 'text/xml'));
 	}
 	
 	public function quickbooks_web_connector() {
@@ -22,7 +22,8 @@ class QuickbooksController extends AppController {
 		$result = $this->QuickbooksQueue->launchWebConnector();
 		
 		// Set the response Content-Type to plain.
-		$this->response->type('plain');
+		//$this->response->type('plain');
+		$this->response->type('text/plain');
 		$this->response->body($result);
 		// Return response object to prevent controller from trying to render a view
 		return $this->response;
@@ -71,7 +72,8 @@ class QuickbooksController extends AppController {
 		}
 		
 		// Set the response Content-Type to plain.
-		$this->response->type('xml');
+		//$this->response->type('xml');
+		$this->response->type('text/xml');
 		$this->response->body($qbxml);
 		return $this->response;
 	}
@@ -125,7 +127,8 @@ class QuickbooksController extends AppController {
 		}
 		
 		// Set the response Content-Type to plain.
-		$this->response->type('xml');
+		//$this->response->type('xml');
+		$this->response->type('text/xml');
 		$this->response->body($qbxml);
 		return $this->response;
 	}
