@@ -1,0 +1,54 @@
+/*
+    * The QuickBooks Web Connector (QBWC) works like this:
+ * 	- You create a SOAP server that response to a set of SOAP methods
+ * 	- You install and run the QBWC alongside your existing QuickBooks installation
+ * 	- You register your SOAP server with the QBWC
+ * 	- The QBWC calls the ->authenticate() method via a SOAP request
+ * 	- You create and assign a 'ticket' (essentially a session ID value) to the QBWC session, this ticket gets sent to your SOAP server for authentication purposes with every request thereafter
+ * 	- The QBWC calls the ->sendRequestXML() method via a SOAP request, if there is work to do, you send back qbXML commands encapsulated in an object
+ * 	- The QBWC passes these qbXML commands to QuickBooks, QuickBooks processes them and passes them back
+ * 	- The QBWC passes back the response from QuickBooks to your SOAP server via a SOAP call to ->receiveResponseXML()
+ * 	- If you return an integer between 0 and 99 (inclusive) from ->receiveResponseXML(), the QBWC will call ->sendRequestXML() again, to get the next qbXML command
+ * 	- Once you return a 100 from ->receiveResponseXML(), the QBWC calls ->closeConnection() and closes the socket connection shortly thereafter
+ * 
+ */
+
+20150424.23:07:28 UTC	: QBWebConnector.WebServiceManager.DoUpdateSelected() : updateWS() for application = 'QuickBooks Integrator Business 360' has STARTED
+20150424.23:07:28 UTC	: QBWebConnector.RegistryManager.getUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock = FALSE
+20150424.23:07:28 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to True
+20150424.23:07:28 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session locked *********************
+20150424.23:07:28 UTC	: QBWebConnector.SOAPWebService.instantiateWebService() : Initiated connection to the following application.
+20150424.23:07:28 UTC	: QBWebConnector.SOAPWebService.instantiateWebService() : AppName: QuickBooks Integrator Business 360
+20150424.23:07:28 UTC	: QBWebConnector.SOAPWebService.instantiateWebService() : AppUniqueName (if available): QuickBooks Integrator Business 360
+20150424.23:07:28 UTC	: QBWebConnector.SOAPWebService.instantiateWebService() : AppURL: https://creationsite.my360e.com/quickbooks/quickbooks_web_connector
+20150424.23:07:28 UTC	: QBWebConnector.SOAPWebService.do_serverVersion() : *** Calling serverVersion().
+20150424.23:07:29 UTC	: QBWebConnector.SOAPWebService.do_serverVersion() : Actual error received from web service for serverVersion call: <Response is not well-formed XML.>. For backward compatibility of all webservers, QBWC will catch all errors under app-not-supporting-serverVersion.
+20150424.23:07:29 UTC	: QBWebConnector.SOAPWebService.do_serverVersion() : This application does not contain support for serverVersion. Allowing update operation for backward compatibility.
+20150424.23:07:29 UTC	: QBWebConnector.SOAPWebService.do_clientVersion() : *** Calling clientVersion() with following parameter:<productVersion="2.1.0.30">
+20150424.23:07:30 UTC	: QBWebConnector.SOAPWebService.updateWS() : Actual error received from web service for clientVersion call: <Response is not well-formed XML.>. For backward compatibility of all webservers, QBWC will catch all errors under app-not-supporting-clientVersion.
+20150424.23:07:30 UTC	: QBWebConnector.SOAPWebService.do_clientVersion() : This application does not contain support for clientVersion. Allowing update operation for backward compatibility.
+20150424.23:07:30 UTC	: QBWebConnector.SOAPWebService.do_authenticate() : Authenticating to application 'QuickBooks Integrator Business 360', username = 'business360quickbooks'
+20150424.23:07:30 UTC	: QBWebConnector.SOAPWebService.do_authenticate() : *** Calling authenticate() with following parameters:<userName="business360quickbooks"><password=<MaskedForSecurity>
+20150424.23:07:30 UTC	: QBWebConnector.SOAPWebService.do_authenticate() : QBWC1012: Authentication failed due to following error message.
+Response is not well-formed XML.
+More info:
+StackTrace =    at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at QBWebConnector.localhost.WCWebServiceDoc.authenticate(String strUserName, String strPassword)
+   at QBWebConnector.localhost.WCWebService.authenticate(String strUserName, String strPassword)
+   at QBWebConnector.SOAPWebService.authenticate(String UserName, String Password)
+   at QBWebConnector.WebService.do_authenticate(String& ticket, String& companyFileName)
+Source = System.Web.Services
+20150424.23:07:30 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20150424.23:07:30 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20150424.23:07:30 UTC	: QBWebConnector.WebServiceManager.DoUpdateSelected() : Update completed with errors. See log (QWClog.txt) for details.
+
+
+DATABASE
+quickbooks_log
+1	NULL	0	Handler is starting up...: array (↵  'qb_company_file' => NULL,↵  'qbwc_min_version' => NULL,↵  'qbwc_wait_before_next_update' => NULL,↵  'qbwc_min_run_every_n_seconds' => NULL,↵  'qbwc_version_warning_message' => NULL,↵  'qbwc_version_error_message' => NULL,↵  'qbwc_interactive_url' => NULL,↵  'autoadd_missing_requestid' => true,↵  'check_valid_requestid' => true,↵  'server_version' => 'PHP QuickBooks SOAP Server v2.0 at /quickbooks/quickbooks_web_connector',↵  'authenticate' => NULL,↵  'authenticate_dsn' => NULL,↵  'map_application_identifiers' => true,↵  'allow_remote_addr' => ↵  array (↵  ),↵  'deny_remote_addr' => ↵  array (↵  ),↵  'convert_unix_newlines' => true,↵  'deny_concurrent_logins' => false,↵  'deny_concurrent_timeout' => 60,↵  'deny_reallyfast_logins' => false,↵  'deny_reallyfast_timeout' => 600,↵  'masking' => true,↵)	2015-04-24 16:12:14
+2	NULL	0	serverVersion()	2015-04-24 16:12:14
+3	NULL	0	Handler is starting up...: array (↵  'qb_company_file' => NULL,↵  'qbwc_min_version' => NULL,↵  'qbwc_wait_before_next_update' => NULL,↵  'qbwc_min_run_every_n_seconds' => NULL,↵  'qbwc_version_warning_message' => NULL,↵  'qbwc_version_error_message' => NULL,↵  'qbwc_interactive_url' => NULL,↵  'autoadd_missing_requestid' => true,↵  'check_valid_requestid' => true,↵  'server_version' => 'PHP QuickBooks SOAP Server v2.0 at /quickbooks/quickbooks_web_connector',↵  'authenticate' => NULL,↵  'authenticate_dsn' => NULL,↵  'map_application_identifiers' => true,↵  'allow_remote_addr' => ↵  array (↵  ),↵  'deny_remote_addr' => ↵  array (↵  ),↵  'convert_unix_newlines' => true,↵  'deny_concurrent_logins' => false,↵  'deny_concurrent_timeout' => 60,↵  'deny_reallyfast_logins' => false,↵  'deny_reallyfast_timeout' => 600,↵  'masking' => true,↵)	2015-04-24 16:12:15
+4	NULL	0	clientVersion()	2015-04-24 16:12:15
+5	NULL	0	Handler is starting up...: array (↵  'qb_company_file' => NULL,↵  'qbwc_min_version' => NULL,↵  'qbwc_wait_before_next_update' => NULL,↵  'qbwc_min_run_every_n_seconds' => NULL,↵  'qbwc_version_warning_message' => NULL,↵  'qbwc_version_error_message' => NULL,↵  'qbwc_interactive_url' => NULL,↵  'autoadd_missing_requestid' => true,↵  'check_valid_requestid' => true,↵  'server_version' => 'PHP QuickBooks SOAP Server v2.0 at /quickbooks/quickbooks_web_connector',↵  'authenticate' => NULL,↵  'authenticate_dsn' => NULL,↵  'map_application_identifiers' => true,↵  'allow_remote_addr' => ↵  array (↵  ),↵  'deny_remote_addr' => ↵  array (↵  ),↵  'convert_unix_newlines' => true,↵  'deny_concurrent_logins' => false,↵  'deny_concurrent_timeout' => 60,↵  'deny_reallyfast_logins' => false,↵  'deny_reallyfast_timeout' => 600,↵  'masking' => true,↵)	2015-04-24 16:12:16
+6	NULL	0	authenticate()	2015-04-24 16:12:16
+7	1	0	Login: business360quickbooks	2015-04-24 16:12:16
