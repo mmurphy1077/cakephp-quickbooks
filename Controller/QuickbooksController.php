@@ -57,9 +57,11 @@ class QuickbooksController extends AppController {
 		
 		// Obtain the Customer from information from the Customer Model.
 		$result = $this->Customer->getQuickbooksFormated($ID);
+		
+		/*
 		if(!empty($result)) {
 			$qbxml = '<?xml version="1.0" encoding="utf-8"?>
-			<?qbxml version="7.0"?>
+			<?qbxml version="8.0"?>
 			<QBXML>
 				<QBXMLMsgsRq onError="stopOnError">
 					<CustomerAddRq requestID="' . $requestID . '">
@@ -84,6 +86,32 @@ class QuickbooksController extends AppController {
 				</QBXMLMsgsRq>
 			</QBXML>';
 		}
+		*/
+		
+$qbxml =  '<?qbxml version="8.0"?>
+			<QBXML>
+				<QBXMLMsgsRq onError="stopOnError">
+					<CustomerAddRq>
+						<CustomerAdd>
+							<Name>1234567 Steel Dcor</Name>
+							<CompanyName>Steel Dcor</CompanyName>
+							<FirstName>George</FirstName>
+							<LastName>Jetson</LastName>
+							<BillAddress>
+								<Addr1>1210 E. Maple</Addr1>
+								<City>Seattle</City>
+								<State>WA</State>
+								<PostalCode>12345</PostalCode>
+								<Country>USA</Country>
+							</BillAddress>
+							<Phone>555-555-1212</Phone>
+							<Fax>555-555-1212</Fax>
+							<Contact>George Jetson</Contact>
+						</CustomerAdd>
+					</CustomerAddRq>
+				</QBXMLMsgsRq>
+			</QBXML>';
+		
 		
 		// Set the response Content-Type to plain.
 		//$this->response->type('xml');
@@ -100,7 +128,7 @@ class QuickbooksController extends AppController {
 		$result = $this->Customer->getQuickbooksFormated($ID);
 		if(!empty($result)) {
 			$qbxml = '<?xml version="1.0" encoding="utf-8"?>
-			<?qbxml version="7.0"?>
+			<?qbxml version="8.0"?>
 			<QBXML>
 				<QBXMLMsgsRq onError="stopOnError">
 					<CustomerAddRq requestID="' . $requestID . '">
@@ -123,7 +151,7 @@ class QuickbooksController extends AppController {
 						</CustomerAdd>
 					</CustomerAddRq>
 				</QBXMLMsgsRq>
-			</QBXML>';
+			</QBXML>';		
 		}
 	
 		// Set the response Content-Type to plain.
