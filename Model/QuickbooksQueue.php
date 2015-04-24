@@ -434,6 +434,8 @@ class QuickbooksQueue extends AppModel {
 	}
 	
 	private function __requireFramwork() {
+		require_once APP.'Vendor'.DS.'QuickBooks'.DS.'QuickBooks.php';
+		/*
 		switch (Configure::read('Environment.platform')) {
 			case 'development' :
 				require_once APP.'Vendor'.DS.'QuickBooks'.DS.'QuickBooks.php';
@@ -442,6 +444,7 @@ class QuickbooksQueue extends AppModel {
 			default:
 				App::import('Vendor', 'QuickBooks', array('file' => Configure::read('Quickbooks.sdk')));
 		}
+		*/
 	}
 	
 	/**

@@ -23,7 +23,8 @@ class QuickbooksController extends AppController {
 		
 		// Set the response Content-Type to plain.
 		//$this->response->type('plain');
-		$this->response->type('text/plain');
+#		$this->response->type('text/plain');
+		$this->response->type('text/xml');
 		$this->response->body($result);
 		// Return response object to prevent controller from trying to render a view
 		return $this->response;
@@ -37,7 +38,20 @@ class QuickbooksController extends AppController {
 		*/
 	}
 
-	public function quickbooks_customer_add_request($requestID, $user, $action, $ID, $extra, &$err, $last_action_time, $last_actionident_time, $version, $locale) {
+	/**
+	 * http://localhost/com.business360/_DEVELOPMENT/quickbooks/quickbooks_customer_add_request/null/null/null/405/null/null/null/null/null/null
+	 * @param unknown $requestID
+	 * @param unknown $user
+	 * @param unknown $action
+	 * @param unknown $ID
+	 * @param unknown $extra
+	 * @param unknown $err
+	 * @param unknown $last_action_time
+	 * @param unknown $last_actionident_time
+	 * @param unknown $version
+	 * @param unknown $locale
+	 */
+	public function quickbooks_customer_add_request($requestID, $user, $action, $ID, $extra) {
 		$this->layout = false;
 		Configure::write('debug', 0);
 		
