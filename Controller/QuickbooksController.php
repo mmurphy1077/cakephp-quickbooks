@@ -53,7 +53,7 @@ class QuickbooksController extends AppController {
 	 */
 	public function quickbooks_customer_add_request($requestID, $user, $action, $ID, $extra) {
 		$this->layout = false;
-		Configure::write('debug', 0);
+		#Configure::write('debug', 2);
 		
 		// Obtain the Customer from information from the Customer Model.
 		$result = $this->Customer->getQuickbooksFormated($ID);
@@ -85,6 +85,47 @@ class QuickbooksController extends AppController {
 			</QBXML>';
 		}
 		
+		// Set the response Content-Type to plain.
+		//$this->response->type('xml');
+		$this->response->type('text/xml');
+		$this->response->body($qbxml);
+		return $this->response;
+	}
+	
+	public function quickbooks_customer_add_request_validate($requestID, $ID) {
+		$this->layout = false;
+		#Configure::write('debug', 2);
+		
+		// Obtain the Customer from information from the Customer Model.
+		$result = $this->Customer->getQuickbooksFormated($ID);
+		if(!empty($result)) {
+			$qbxml = '<?xml version="1.0" encoding="utf-8"?>
+			<?qbxml version="7.0"?>
+			<QBXML>
+				<QBXMLMsgsRq onError="stopOnError">
+					<CustomerAddRq requestID="' . $requestID . '">
+						<CustomerAdd>
+							<Name>' . $result['name'] . '</Name>
+							<CompanyName>' . $result['company_name'] . '</CompanyName>
+							<Contact>' . $result['contact'] . '</Contact>
+							<BillAddress>
+								<Addr1>' . $result['billing_addr1'] . '</Addr1>
+								<Addr2>' . $result['billing_addr2'] . '</Addr2>
+								<City>' . $result['billing_city'] . '</City>
+								<State>' . $result['billing_state'] . '</State>
+								<PostalCode>' . $result['billing_post_code'] . '</PostalCode>
+								<Country>' . $result['billing_country'] . '</Country>
+							</BillAddress>
+							<Phone>' . $result['phone'] . '</Phone>
+							<AltPhone>' . $result['alt_phone'] . '</AltPhone>
+							<Fax>' . $result['fax'] . '</Fax>
+							<Email>' . $result['email'] . '</Email>
+						</CustomerAdd>
+					</CustomerAddRq>
+				</QBXMLMsgsRq>
+			</QBXML>';
+		}
+	
 		// Set the response Content-Type to plain.
 		//$this->response->type('xml');
 		$this->response->type('text/xml');
