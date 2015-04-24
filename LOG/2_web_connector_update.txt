@@ -1,0 +1,28 @@
+20150424.16:57:36 UTC	: QBWebConnector.WebServiceManager.DoUpdateSelected() : updateWS() for application = 'QuickBooks Integrator Business 360' has STARTED
+20150424.16:57:36 UTC	: QBWebConnector.RegistryManager.getUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock = FALSE
+20150424.16:57:36 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to True
+20150424.16:57:36 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session locked *********************
+20150424.16:57:36 UTC	: QBWebConnector.SOAPWebService.instantiateWebService() : Initiated connection to the following application.
+20150424.16:57:36 UTC	: QBWebConnector.SOAPWebService.instantiateWebService() : AppName: QuickBooks Integrator Business 360
+20150424.16:57:36 UTC	: QBWebConnector.SOAPWebService.instantiateWebService() : AppUniqueName (if available): QuickBooks Integrator Business 360
+20150424.16:57:36 UTC	: QBWebConnector.SOAPWebService.instantiateWebService() : AppURL: https://creationsite.my360e.com/quickbooks/quickbooks_web_connector
+20150424.16:57:36 UTC	: QBWebConnector.SOAPWebService.do_serverVersion() : *** Calling serverVersion().
+20150424.16:57:37 UTC	: QBWebConnector.SOAPWebService.do_serverVersion() : Actual error received from web service for serverVersion call: <Response is not well-formed XML.>. For backward compatibility of all webservers, QBWC will catch all errors under app-not-supporting-serverVersion.
+20150424.16:57:37 UTC	: QBWebConnector.SOAPWebService.do_serverVersion() : This application does not contain support for serverVersion. Allowing update operation for backward compatibility.
+20150424.16:57:37 UTC	: QBWebConnector.SOAPWebService.do_clientVersion() : *** Calling clientVersion() with following parameter:<productVersion="2.1.0.30">
+20150424.16:57:38 UTC	: QBWebConnector.SOAPWebService.updateWS() : Actual error received from web service for clientVersion call: <Response is not well-formed XML.>. For backward compatibility of all webservers, QBWC will catch all errors under app-not-supporting-clientVersion.
+20150424.16:57:38 UTC	: QBWebConnector.SOAPWebService.do_clientVersion() : This application does not contain support for clientVersion. Allowing update operation for backward compatibility.
+20150424.16:57:38 UTC	: QBWebConnector.SOAPWebService.do_authenticate() : Authenticating to application 'QuickBooks Integrator Business 360', username = 'business360quickbooks'
+20150424.16:57:38 UTC	: QBWebConnector.SOAPWebService.do_authenticate() : *** Calling authenticate() with following parameters:<userName="business360quickbooks"><password=<MaskedForSecurity>
+20150424.16:57:38 UTC	: QBWebConnector.SOAPWebService.do_authenticate() : QBWC1012: Authentication failed due to following error message.
+Response is not well-formed XML.
+More info:
+StackTrace =    at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at QBWebConnector.localhost.WCWebServiceDoc.authenticate(String strUserName, String strPassword)
+   at QBWebConnector.localhost.WCWebService.authenticate(String strUserName, String strPassword)
+   at QBWebConnector.SOAPWebService.authenticate(String UserName, String Password)
+   at QBWebConnector.WebService.do_authenticate(String& ticket, String& companyFileName)
+Source = System.Web.Services
+20150424.16:57:38 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : HKEY_CURRENT_USER\Software\Intuit\QBWebConnector\UpdateLock has been set to False
+20150424.16:57:38 UTC	: QBWebConnector.RegistryManager.setUpdateLock() : ********************* Update session unlocked *********************
+20150424.16:57:38 UTC	: QBWebConnector.WebServiceManager.DoUpdateSelected() : Update completed with errors. See log (QWClog.txt) for details.

@@ -1,0 +1,284 @@
+20150424.17:01:16 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20150424.17:01:16 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connected., Session started
+20150424.17:01:16 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Deleting FileID value from Company object for the ownerID = {90A44FB7-27F3-4815-AC85-166DA7E7D1EB}
+20150424.17:01:16 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="stopOnError"><DataExtDelRq requestID="1"><DataExtDel><OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID><DataExtName>FileID</DataExtName><OtherDataExtType>Company</OtherDataExtType></DataExtDel></DataExtDelRq></QBXMLMsgsRq></QBXML>
+
+20150424.17:01:16 UTC	: QBWebConnector.SOAPWebService.registerDataExtInQB() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<DataExtDelRs requestID="1" statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+<DataExtDelRet>
+<OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID>
+<DataExtName>FileID</DataExtName>
+<TimeDeleted>2015-04-24T10:01:16-08:00</TimeDeleted>
+</DataExtDelRet>
+</DataExtDelRs>
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20150424.17:01:16 UTC	: QBWebConnector.SOAPWebService.DisconnectFromQB() : Session ended and connection closed
+20150424.17:01:16 UTC	: QBWebConnector.SOAPWebService.deleteFileIDValueFromQB() : Data extension FileID has been cleared from QuickBooks for owner id.
+20150424.17:01:16 UTC	: RemoveApp() : Application QuickBooks Integrator Business 360 has been removed.
+20150424.17:01:23 UTC	: QWCReader.ParseQWC() : Contents of QWC file: -
+<QBWCXML>
+  <AppName>QuickBooks Integrator Business 360</AppName>
+  <AppID></AppID>
+  <AppURL>https://creationsite.my360e.com/quickbooks/quickbooks_web_connector</AppURL>
+  <AppDescription>QuickBooks SOAP Server for Business360</AppDescription>
+  <AppSupport>https://creationsite.my360e.com</AppSupport>
+  <UserName>business360quickbooks</UserName>
+  <OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID>
+  <FileID>{67F3C9B6-86F1-4FBB-B1FF-966DE1813D20}</FileID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>2</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
+20150424.17:01:23 UTC	: QBWebConnector.WebServiceManager.ReadQWC(QWCReader QWC) : Parsing application configuration xml file to load its content to variables
+20150424.17:01:26 UTC	: QBWebConnector.RegistryManager.createRegKey() : Error creating registry key for appName = <>
+20150424.17:01:26 UTC	: QBWebConnector.RegistryManager.createRegKey() : Reason: Value cannot be null.
+Parameter name: name
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.SerializeToRegistry() : Error saving QuickBooks Integrator Business 360 to Registry: Object reference not set to an instance of an object.
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connecting to QuickBooks...
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.ConnectToQB() : Connected., Session started
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.AddToQuickBooks() : Application name = QuickBooks Integrator Business 360
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.AddToQuickBooks() : Querying company file to find if owner/file id exists.
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.findFileIDinQB() : Latest QBXML version supported = v13.0
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.findFileIDinQB() : Querying QuickBooks for existance of owner/file id
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.findFileIDinQB() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="stopOnError"><DataExtDefQueryRq requestID="1"><OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID></DataExtDefQueryRq></QBXMLMsgsRq></QBXML>
+
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.findFileIDinQB() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<DataExtDefQueryRs requestID="1" statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+<DataExtDefRet>
+<OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID>
+<DataExtName>AppLock</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<AssignToObject>Company</AssignToObject>
+</DataExtDefRet>
+<DataExtDefRet>
+<OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID>
+<DataExtName>FileID</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<AssignToObject>Company</AssignToObject>
+</DataExtDefRet>
+</DataExtDefQueryRs>
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.findFileIDinQB() : Status message: Status OK
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.registerDataExtInQB() : Creating DataExtDef named AppLock assigned to Company object for the ownerID = {90A44FB7-27F3-4815-AC85-166DA7E7D1EB}
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.registerDataExtInQB() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="stopOnError"><DataExtDefAddRq requestID="1"><DataExtDefAdd><OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID><DataExtName>AppLock</DataExtName><DataExtType>STR255TYPE</DataExtType><AssignToObject>Company</AssignToObject></DataExtDefAdd></DataExtDefAddRq></QBXMLMsgsRq></QBXML>
+
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.registerDataExtInQB() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<DataExtDefAddRs requestID="1" statusCode="3100" statusSeverity="Error" statusMessage="The name &quot;AppLock&quot; of the list element is already in use." />
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.registerDataExtInQB() : Data extension definition has been created in QuickBooks for owner id.
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.AddToQuickBooks() : Registered the AppLock to company file successfully.
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.findFileIDValueinQB() : Latest QBXML version supported = v13.0
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.findFileIDValueinQB() : Querying QuickBooks for existance of owner/file id
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.findFileIDValueinQB() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="stopOnError"><CompanyQueryRq requestID="1"><OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID></CompanyQueryRq></QBXMLMsgsRq></QBXML>
+
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.findFileIDValueinQB() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<CompanyQueryRs requestID="1" statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+<CompanyRet>
+<IsSampleCompany>false</IsSampleCompany>
+<CompanyName>core software</CompanyName>
+<LegalCompanyName>core software</LegalCompanyName>
+<Address>
+<City>4628 sw 49th ave</City>
+<State>OR</State>
+<PostalCode>97221</PostalCode>
+<Country>US</Country>
+</Address>
+<AddressBlock>
+<Addr1>4628 sw 49th ave</Addr1>
+<Addr2>OR 97221</Addr2>
+</AddressBlock>
+<LegalAddress>
+<Addr1>4628 sw 49th ave</Addr1>
+<City>portland</City>
+<State>OR</State>
+<PostalCode>97221</PostalCode>
+<Country>US</Country>
+</LegalAddress>
+<Phone>971-400-0048</Phone>
+<FirstMonthFiscalYear>January</FirstMonthFiscalYear>
+<FirstMonthIncomeTaxYear>January</FirstMonthIncomeTaxYear>
+<TaxForm>Form1040</TaxForm>
+<SubscribedServices>
+<Service>
+<Name>QuickBooks Online Banking</Name>
+<Domain>banking.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing</Name>
+<Domain>billing.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing Level 1 Service</Name>
+<Domain>qbob1.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing Level 2 Service</Name>
+<Domain>qbob2.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing Payment Service</Name>
+<Domain>qbobpay.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Bill Payment</Name>
+<Domain>billpay.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Online Billing Paper Mailing Service</Name>
+<Domain>qbobpaper.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Payroll Service</Name>
+<Domain>payroll.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Basic Payroll Service</Name>
+<Domain>payrollbsc.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Basic Disk Payroll Service</Name>
+<Domain>payrollbscdisk.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Deluxe Payroll Service</Name>
+<Domain>payrolldlx.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>QuickBooks Premier Payroll Service</Name>
+<Domain>payrollprm.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>Basic Plus Federal</Name>
+<Domain>basic_plus_fed.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>Basic Plus Federal and State</Name>
+<Domain>basic_plus_fed_state.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>Basic Plus Direct Deposit</Name>
+<Domain>basic_plus_dd.qb</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+<Service>
+<Name>Merchant Account Service</Name>
+<Domain>mas.qbn</Domain>
+<ServiceStatus>Never</ServiceStatus>
+</Service>
+</SubscribedServices>
+<AccountantCopy>
+<AccountantCopyExists>false</AccountantCopyExists>
+</AccountantCopy>
+<DataExtRet>
+<OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID>
+<DataExtName>AppLock</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>UNLOCKED:BILLFROWINED881</DataExtValue>
+</DataExtRet>
+</CompanyRet>
+</CompanyQueryRs>
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.enterDataExtValueInQB() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="stopOnError"><DataExtAddRq requestID="1"><DataExtAdd><OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID><DataExtName>FileID</DataExtName><OtherDataExtType>Company</OtherDataExtType><DataExtValue>{67F3C9B6-86F1-4FBB-B1FF-966DE1813D20}</DataExtValue></DataExtAdd></DataExtAddRq></QBXMLMsgsRq></QBXML>
+
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.enterDataExtValueInQB() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<DataExtAddRs requestID="1" statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+<DataExtRet>
+<OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID>
+<DataExtName>FileID</DataExtName>
+<DataExtType>STR255TYPE</DataExtType>
+<DataExtValue>{67F3C9B6-86F1-4FBB-B1FF-966DE1813D20}</DataExtValue>
+</DataExtRet>
+</DataExtAddRs>
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20150424.17:01:26 UTC	: QBWebConnector.SOAPWebService.enterDataExtValueInQB() : Data extension value has been created in QuickBooks for FileID
+20150424.17:01:26 UTC	: QBWebConnector.CompanyFileLock.Send_DataExtDefAddRqXML() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="stopOnError"><DataExtDefAddRq requestID="1"><DataExtDefAdd><OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID><DataExtName>AppLock</DataExtName><DataExtType>STR255TYPE</DataExtType><AssignToObject>Company</AssignToObject></DataExtDefAdd></DataExtDefAddRq></QBXMLMsgsRq></QBXML>
+
+20150424.17:01:26 UTC	: QBWebConnector.CompanyFileLock.Send_DataExtDefAddRqXML() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<DataExtDefAddRs requestID="1" statusCode="3100" statusSeverity="Error" statusMessage="The name &quot;AppLock&quot; of the list element is already in use." />
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20150424.17:01:26 UTC	: QBWebConnector.CompanyFileLock.Send_DataExtAddRqXML() : XML dump follows: -
+
+<?xml version="1.0"?><?qbxml version="13.0"?><QBXML><QBXMLMsgsRq onError="stopOnError"><DataExtAddRq requestID="1"><DataExtAdd><OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID><DataExtName>AppLock</DataExtName><OtherDataExtType>Company</OtherDataExtType><DataExtValue>UNLOCKED:BILLFROWINED881</DataExtValue></DataExtAdd></DataExtAddRq></QBXMLMsgsRq></QBXML>
+
+20150424.17:01:27 UTC	: QBWebConnector.CompanyFileLock.Send_DataExtAddRqXML() : XML dump follows: -
+
+<?xml version="1.0" ?>
+<QBXML>
+<QBXMLMsgsRs>
+<DataExtAddRs requestID="1" statusCode="3180" statusSeverity="Error" statusMessage="There was an error when saving a data extension named &quot;AppLock&quot;.  QuickBooks error message: Attribute with specified name already exists." />
+</QBXMLMsgsRs>
+</QBXML>
+
+
+20150424.17:01:27 UTC	: QBWebConnector.SOAPWebService.AddToQuickBooks() : Application QuickBooks Integrator Business 360 has been added to QuickBooks.
+20150424.17:01:27 UTC	: QBWebConnector.SOAPWebService.DisconnectFromQB() : Session ended and connection closed
