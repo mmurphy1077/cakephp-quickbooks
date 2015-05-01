@@ -1,0 +1,118 @@
+.file_upload_container {
+	border-bottom: 1px solid #CCCCCC;
+    clear: left;
+    display: none;
+    float: left;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+#drop {
+	border: 1px dotted #000000;
+    padding: 30px;
+    text-align: center;
+}
+.file_upload_container input {
+    display: none;
+}
+
+div.knob-container {
+	display: inline-block;
+    float: left;
+    margin: 7px 10px 0 0;
+}
+input.knob {
+	display:none;
+}
+div.file-container {
+	border-bottom: 1px solid #CCCCCC;
+    clear: left;
+    float: left;
+    margin: 0 20px 15px 0;
+    padding-bottom: 15px;
+    width: 100%;
+}
+div.file-container div.name {
+	font-size: 14px;
+	font-family: OpenSansSemiBold;
+}
+div.upload-container { margin: 20px 0px 0px 0px; }
+span.version {
+	color: #4a4a4a;		
+	font-family: OpenSansSemiBold;
+}
+div.file-container div.details.version {
+	margin-top: 8px;
+}
+div.file-container div.details a {
+	text-decoration: underline;
+}
+div.doc-info-container {
+	float: left;
+}
+div.doc-action-container {
+	float: right;
+}
+div.working div.file-actions a,
+div.file-loading-actions a {
+	display:none;
+}
+div.working div.file-loading-actions a {
+	display:block;
+}
+div.file-loading-actions {
+	margin-left:46px;
+}
+div.doc-print-container  {
+	line-height:30px;
+}
+div.doc-type {
+	background-image: url("../img/document_types/default.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 23px 30px;
+    padding: 0 0 0 35px;
+}
+div.doc-type.doc-type-pdf { background-image: url("../img/document_types/pdf.png"); }
+div.doc-type.doc-type-word { background-image: url("../img/document_types/word.png"); }
+div.doc-type.doc-type-excel { background-image: url("../img/document_types/excel.png"); }
+div.doc-type.doc-type-pp { background-image: url("../img/document_types/pp.png"); }
+div.doc-type.doc-type-zip { background-image: url("../img/document_types/zip.png"); }
+div.doc-type.doc-type-ps { background-image: url("../img/document_types/ps.png"); }
+div.doc-type.doc-type-text { background-image: url("../img/document_types/txt.png"); }
+div.doc-type.doc-type-ss { background-image: url("../img/document_types/ss.png"); }
+
+
+.progress {
+	display:none;
+}
+div.working  .progress {
+    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;*/
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    height: 15px;
+    margin-top: -13px;
+    overflow: hidden;	
+    display:block;
+}
+.progress.active .progress-bar {
+    animation: 2s linear 0s normal none infinite progress-bar-stripes;
+}
+.progress-striped .progress-bar-success {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+}
+.progress-bar {
+    background-color: #428BCA;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+    color: #FFFFFF;
+    float: left;
+    font-size: 12px;
+    height: 100%;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-success {
+   /* background-color: #5CB85C;*/
+}

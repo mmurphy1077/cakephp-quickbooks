@@ -1,0 +1,154 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	font-size: 17px;
+	line-height:21px
+	font-weight: 300;
+	color: #000000;
+}
+
+a:link, a:visited {
+	color: #32a7e0;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #32a7e0;
+}
+
+b {
+	font-weight: bold;
+}
+
+.ucase {
+	text-transform: uppercase;
+}
+.break_after { page-break-after:always; }
+.group { page-break-inside: avoid; }
+.page_element {
+	background-color: #ffffff;
+	width: 1100px;
+	/*height: 1529px;*/
+	overflow: hidden;
+	margin: auto;
+	/*padding: 60px 38px 61px 38px;*/
+	padding: 0 38px 0 38px;
+	line-height:25px;
+}
+.line-items {
+	min-height:450px;
+}
+h2 {
+	font-size: 22px;
+    font-weight: normal;
+    line-height: 27px;
+}
+.abstract, .line-items, .footer { font-size:14px; }
+#quote_where h2, #quote_who h2, #quote_type h2 {
+	font-size: 25px;
+    font-weight: 600;
+    line-height: 28px;
+}
+#quote_where, #quote_who, #quote_type { line-height: 24px; }
+#quote_where { text-align:right; }
+#quote_type { text-align:center; }
+.header {
+	overflow: hidden;
+	text-align: center;
+}
+
+.header #invoice_header {
+	overflow: hidden;
+	text-align: left;
+}
+
+.header .meta {
+	width: 100%;
+	overflow: hidden;
+	margin: 12px 0 30px 0;
+}
+
+.header .page-number {
+	float: right;
+	text-align: right;
+	font-size: 18px;
+}
+/*
+p {
+	margin-bottom: 40px;
+}
+*/
+.footer p { margin: 10px 0 60px 0; }
+
+table.standard,
+table.data1 {
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px solid #000000;
+}
+
+table.data1 tr {
+	border-bottom: 1px solid #000000;
+}
+
+table.data1 tr th {
+	padding: 40px;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+table.data1 tr td {
+	padding: 40px 0 40px 0;
+	text-align: left;
+	vertical-align: top;
+}
+
+.total { 
+	font-size: 25px;
+    font-weight: 600;
+    line-height: 35px;
+    padding-top: 55px;
+}
+table.standard { border: none; }
+table.standard tr td {
+	width: 50%;
+	padding: 30px 40px 20px 0;
+	vertical-align: top;
+	text-align: left;
+}
+table.standard tr td.footer_address {
+	padding-top: 20px;
+	line-height:25px;
+}
+table.standard tr td.signature_container {
+	background-color: #E5E5E5;
+    line-height: 30px;
+    padding-left: 40px;
+}
+.footnotes {
+	padding-top: 30px;
+    text-align: center;
+}
+.abstract {
+	padding-top:60px;	
+}
+.quote_line_item_description {
+	/*margin:10px 0 0 50px;*/
+	margin:10px 0 0 0;
+}
+div#quote_iframe_content {
+	width: 1200px;
+	height: 2000px;
+	zoom: 0.55;
+	-moz-transform: scale(0.55);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(0.55);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(0.55);
+	-webkit-transform-origin: 0 0; 
+}
+span.email { color:#277EA8; }

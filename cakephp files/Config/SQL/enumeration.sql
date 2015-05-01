@@ -1,0 +1,2 @@
+/* 5:14:37 PM MAMP */ ALTER TABLE `enumerations` ADD `sort` INT(11)  NULL  DEFAULT NULL  AFTER `status`;
+/* 8:02:02 PM MAMP */ ALTER TABLE `enumerations` ADD `static` TINYINT(4)  NULL  DEFAULT '0'  AFTER `sort`;

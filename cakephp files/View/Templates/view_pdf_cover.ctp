@@ -1,0 +1,1 @@
+<?php echo $this->element('pdf'.DS.'quote_coversheet', array('q' => $quote)); ?>

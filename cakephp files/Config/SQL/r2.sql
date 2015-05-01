@@ -1,0 +1,2 @@
+/* 10:14:52 AM MAMP */ ALTER TABLE `orders` CHANGE `assigned_to_id` `assigned_to_id` INT(10)  UNSIGNED  NULL  DEFAULT '0';
+/* 10:16:25 AM MAMP */ ALTER TABLE `quotes` CHANGE `assigned_to_id` `assigned_to_id` INT(10)  UNSIGNED  NULL  DEFAULT '0';

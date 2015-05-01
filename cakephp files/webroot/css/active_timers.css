@@ -1,0 +1,26 @@
+div#active-timer-container { background-color:#cccccc; border-top:1px solid #999999; bottom:0; padding:5px 1px 0 1px; position:fixed; left:0; right:0; z-index:1000; }
+div.timer-element-container { height: 40px; }
+.timer-shrink-container {
+	float: left;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+ }
+.timer-element {
+	height: 30px;
+    position: absolute;
+    top: -12px;
+    width: 200px;
+}
+.active-timer-item  { height: 22px; float: left; margin: 11px 15px 0 5px; }
+a.active-timer-delete img { width: 20px; height: 20px; margin: 10px; }
+#log-time-confirm-box { font-size: 12px; margin:10px; }
+table#orders-field-view.standard { margin-top: 50px; border-collapse: inherit; }
+table#orders-field-view.standard tr td { border-bottom: 2px solid #ffffff; padding:0; }
+div.order-cell-container {}
+div#info1-container { min-width:450px; }
+div#info2-container { min-width: 400px;}
+a.active-timer-delete { position: absolute; right: 0; top: 0; }
+div#active-timer-toggle-container { position: absolute; right: 0; top: -25px; padding: 5px 15px 0 18px; background-color: #999999; border-radius: 4px 4px 0 0; height: 24px; }
+div#container-closed { background-color: #ffffff;  border: 1px solid #000000; border-radius: 10px; padding: 0 6px 0 6px; top: -3px; }

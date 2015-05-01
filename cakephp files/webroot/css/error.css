@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+
+#wrapper {
+	width: 75%;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 32px;
+	font-family: OpenSansBold;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 24px;
+	margin: 40px 0 20px 0;
+}
+
+em {
+	color: #666666;
+}
+
+p strong {
+	font-family: OpenSansBold;
+}
+
+p.error strong {
+	color: #cc0000;
+}
+
+p.notice strong {
+	color: #277ea8;
+}
+
+ul.cake-stack-trace li {
+	padding: 0 0 5px 0;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #cccccc;
+}
+
+div.response-msg {
+	margin: 0;
+	margin-bottom: 20px;
+}

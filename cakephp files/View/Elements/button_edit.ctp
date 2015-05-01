@@ -1,0 +1,1 @@
+<?php echo $this->Html->link('&nbsp;', $link, array('class' => 'gear', 'title' => __('Click to manage', true), 'escape' => false)); ?>

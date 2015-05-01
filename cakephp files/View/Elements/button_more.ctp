@@ -1,0 +1,1 @@
+<?php echo $this->Html->link('&nbsp;', $link, array('class' => 'more', 'title' => __('Click for more', true), 'escape' => false)); ?>

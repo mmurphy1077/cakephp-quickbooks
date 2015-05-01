@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+@media screen
+  {
+  	.screen_only { display:none; }
+  }
+@media print
+  {
+	.screen_only { display:block; }
+  }
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	font-family: OpenSans, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 19px;
+	color: #000000;
+}
+div.normal {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+a:link, a:visited {
+	color: #32a7e0;
+	text-decoration: none;
+}
+
+a:hover, a:active { color: #47423C; }
+b { font-weight: bold; }
+.ucase { text-transform: uppercase; }
+
+/*
+
+1275 x 1650 = 8.5" x 11" @ 150dpi
+
+Added one extra pixel to padding-top in .page
+	class below to fix header clipping in
+	long documents. Clipping will still occur
+	around 150 pages... BEWARE!
+
+*/
+
+.page {
+	background-color: #ffffff;
+	width: 1199px;
+/*
+	max-height: 1529px;
+	min-height: 1470px;
+*/
+	overflow: hidden;
+	margin: auto;
+	padding: 40px 38px 0 38px;
+	page-break-after: always;
+}
+h1.red { color:#db4c48; }
+.page h2 {
+	font-size: 35px;
+    font-weight: bold;
+    line-height: 60px;
+}
+.page .header {
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+.page .header .page-number {
+	float: right;
+	text-align: right;
+	line-height: 39px;
+	font-size: 18px;
+}
+.page .footer {
+	height: 41px;
+	line-height: 41px;
+}
+.page .header #invoice_header {
+	text-align: left;
+}
+.col-wide { width: 60%; }
+div#void { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+div#void img { 	
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 975px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+  z-index:100;
+}
+div.report_table_container table { width:100%; }
+div#application_report_container div#report_header_container .title { font-family: OpenSansSemiBold; font-size: 20px; }
+div#trademark-left { left:0; }
+div#trademark-right { right:45px; }
+img#footer-trademark { font-size: 10px; position:relative; right:2px; top:3px; width:45px; vertical-align:middle; }
+div.trademark-container { position:absolute; bottom:5px; line-height:50px; }

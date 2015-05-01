@@ -1,0 +1,1 @@
+This folder contains base Views from which the regular application Views will extend.

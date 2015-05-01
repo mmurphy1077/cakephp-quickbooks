@@ -1,0 +1,1 @@
+<tr class="daily-total border_bottom"><td colspan="<?php echo $colspan; ?>">&nbsp;</td></tr>

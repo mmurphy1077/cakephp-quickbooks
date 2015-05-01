@@ -1,0 +1,617 @@
+@CHARSET "UTF-8";
+
+#body .widget .grid .taxonomy h4 {
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 0;
+	font-family: OpenSansBold;
+}
+div.tinymce_container strong { 
+	font-weight:600;
+}
+div.tinymce_container p { 
+	margin: 5px 0 0 0;
+}
+div.tinymce_container ol, div.tinymce_container ul {
+    list-style: inherit;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.grid .taxonomy {
+	width: 90%;
+	padding: 10px;
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	background-color: #efefef;
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+.grid .taxonomy ul li {
+	padding-left: 3px;
+}
+
+.grid .taxonomy ul li ul {
+	padding-left: 20px;
+}
+
+.grid .taxonomy ul li ul li {
+	border: 0;
+}
+
+ul li span.value.req {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+table table.compact {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+table table.compact tr td {
+	padding: 0;
+	border: none;
+}
+
+img.quote-job-summary {
+	float: right;
+	margin-top: -40px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.quote-job-line-item {
+	width: auto;
+	display: block;
+	border-bottom: 3px solid #cccccc;
+	margin: 0 0 40px 0;
+}
+
+table tr:hover.hidden td {
+	background-color: #efefef;
+}
+
+table tr.hidden td {
+	background-color: #efefef;
+	color: #999999;
+}
+div#log-call fieldset legend, div#log-call label {
+    color: #277EA8;
+    float: left;
+    margin-right: 1%;
+    width: 20%;
+}
+
+div#log-call .widget {
+    margin-bottom: 0;
+}
+
+div#log-call .widget label {
+    display: block;
+}
+
+div#log-call textarea, div#log-call select, div#log-call input {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    color: #777777;
+    padding: 2px;
+    width: 75%;
+}
+
+div#log-call textarea {
+	height: 50px;
+}
+
+div#log-call div.input {
+    clear: both;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+div#log-call div.submit.tabbed {
+    margin-left: 21%;
+}
+
+div#log-call div.submit {
+    clear: both;
+}
+
+div#log-call div.submit input, div.unscheduled-job input#save_job_schedule {
+    background-color: #32A7E0;
+    border: medium none;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 2px 5px;
+    width:auto;
+    font-family: OpenSansLight,Arial,sans-serif;
+    /*font-size: 1em;*/
+    font-size: 16px;
+}
+div#log-call div.submit input { float: left; }
+
+div#log-call .ajax_loader {
+	display: none;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+}
+
+div#log-call div.submit input:hover {
+	background-color: #2c96ca;
+}
+
+div#notes_public {
+	clear:left;
+    line-height: 20px;
+    margin: 50px 0 5px 20px;
+}
+
+div#log-call div.ajax_message_success, div#log-call div.ajax_message_fail {
+	background-position: left top;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    padding-left: 20px;
+    margin-top: 3px;
+}
+div#log-call div.ajax_message_success {
+	background-image: url('../../img/test-pass-icon.png');
+}
+
+div#log-call div.ajax_message_fail {
+	background-image: url("../../img/test-fail-icon.png");
+}
+
+div#datepicker-calendar-container {
+	background-image: url("../../img/icon-calendar.png");
+	float: left;
+    height: 22px;
+    margin-top: 15px;
+    position: relative;
+    width: 22px;
+}
+
+div#datepicker-calendar-container input {
+	left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width:20px;
+    cursor:pointer;
+}
+
+ul.stats a.div-clicktip-short img {
+	margin-left:10px;
+}
+
+
+
+
+
+#schedule_container {
+	float:left;
+	width:100%;
+}
+#schedule_container th.label { text-align:right; }
+#schedule_container th.divider { border-right:1px solid #999999; }
+#schedule_container th.option { text-align:center; }
+#schedule_container th.message { text-align:right; }
+#employees_container { float:left; }
+#employees_container ul {
+    margin-top:30px;
+    width:220px;
+}
+#employees_container li { width: 100%; line-height:30px; }
+#employees_container li, td.employee_record { border-bottom: 1px solid #ede7db; }
+td.employee_record {
+    line-height:20px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+td.employee_record div { width:100%; }
+td.border_right div { width:90%; float:left; }
+#employees_map_container { overflow:hidden; height:638px; }
+#map_canvas { width:99.3%; }
+#map_canvas { border: 3px solid #999999; }
+#time_line { overflow-y:hidden; overflow-x:auto; white-space:nowrap; padding-bottom: 10px; }
+div#scheduled_jobs_container table tr th {
+	color: #999999;
+	background-color:inherit; 
+}
+div#scheduled_jobs_container .center { text-align:center; }
+div#scheduled_jobs_container table tr td { padding: 5px; }
+div#scheduled_jobs_container table tr:hover td { background-color:inherit; }
+#body div#scheduled_jobs_container.widget h3 { margin: 10px 0 5px 5px; }
+div#scheduled_jobs_container.widget a.button  { margin-bottom: 15px; }
+div#un_scheduled_jobs { display:none; }
+.button_arrow_left { margin: 15px 10px 0 0; }
+.button_arrow_right { margin: 15px 10px 0 10px; }
+.icon_calendar { margin-top: 15px; }
+
+div.time_select_container, div.material_select_item { float:left; }
+div.material_select_item { width:100%; }
+div.task_container { margin-top:10px; }
+
+div.error_msg { 
+	clear: right;
+    color: #E93F37;
+    float: right;
+    font-weight: 500;
+}
+div#job_wizard {
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    width: 75%;
+    color:#F7931F;
+    clear:left;
+}
+div#job_wizard div.step.first, div#job_wizard div.step.last { 
+	background-image: url("../../img/div-orange-long.png");
+    background-repeat: no-repeat;
+    text-align: center;
+}
+div#job_wizard div.step.first { background-position: 90px 12px; }
+div#job_wizard div.step.last { background-position: -60px 12px; }
+th.option { text-align:center; /*width:70px;*/ }
+th.option.divider { border-right:1px solid #ffffff; }
+th.label { text-align:right; width:50px; }
+th.message { width:60%; }
+th.message_extended { width:70%; }
+
+div.invoice_container { background-color: #EFEFEF; }
+/*div#invoice_info_container { min-height:900px; margin-right:20px; padding-left:20px; }*/
+div#invoice_details_container h1 { margin-bottom:10px; }
+div#invoice_details_container div.title-buttons { margin-top: 20px; }
+div#invoice_details_container div.title-buttons a { float:left; }
+div#invoice_details_container label { width:auto; }
+div#invoice_info_container.widget h3 { margin-left:0; margin-bottom:0; }
+div#invoice_info_container h1 { 
+	font-family: OpenSansBold;
+    font-size: 20px;
+    margin: 30px 0 0 0;
+    clear:left;
+    
+}
+/* div#invoice_info_container span.label, div#invoice_info_container span.value { margin-top:5px; font-weight:600; } */
+div#invoice_info_container span.label { float:left; }
+div#invoice_info_container span.value { float:right; }
+div#invoice_info_container span.label.total, div#invoice_info_container span.value.total { font-size: 22px }
+
+table#step1_timelog tr td {
+	border: none;
+}
+table#step1_timelog tr.bottom td {
+	border-bottom: 1px solid #cccccc;
+}
+table#step1_timelog tr { height: 5px; }
+table#step1_timelog tr.sub th { background-color: #EFEFEF; color:#000000; }
+table#step1_timelog tr th.center, table#step1_timelog tr td.center { text-align:center; }
+table#step1_timelog tr:hover td { background-color:inherit; }
+table#step1_timelog tr td.spacer, table#step1_timelog tr th.spacer { padding: 0; width: 5px; }
+div.timelog_header {
+    float: left;
+    margin-bottom: 3px;
+    width: 100%;
+ }
+ 
+input[type="checkbox"]#display_estimate { margin-top:25px; width:auto; }
+div#invoice_details_container div.checkbox label { margin-left:10px; }
+div#invoice_details_container input.type_block, div#invoice_details_container textarea.type_block, div#invoice_details_container select.type_block { width:95%; }
+textarea#vanstock_comments, textarea#purchases_comments, textarea#misc_comments { width:99%;  }
+div#invoice_details_container textarea { height:90px; }
+table#step1_timelog textarea { height:80px; width:90%; }
+.type_block {
+	display:block;
+	clear:left;
+}
+div#hour_container span { margin: 5px 5px 0 5px; }
+div#hour_container input, div#hour_container select, div#hour_container span { float:left; }
+div#hour_label { width:100% }
+input#custom_rate { width:100px; margin-left:5px; }
+td.center, th.center { text-align:center; }
+
+table.step3_table tr td input { width:70px; }
+table.step3_table tr.total td { border:none; font-weight:600; }
+table.step3_table tr.total td input { font-weight:600; }
+div#invoice_header {
+	width:100%;
+	/*float:left;*/
+}
+div#invoice_header div { width:33.33% }
+
+div.page_container {
+	margin: auto;
+	max-width: 1199px;
+}
+div#invoice_header_address, div#invoice_header_logo, div#invoice_header_info {
+	float:left;
+}
+div#invoice_header_logo img {
+    margin: auto;
+    width: 100%;
+    display: block;
+}
+div#invoice_header_info h1 { 
+	font-size: 35px;
+    font-weight: 500;
+    line-height: 44px;
+}
+div#invoice_header div#invoice_header_info_container { margin-left: 50%; width: 100%; }
+div#invoice_header div#invoice_header_info_container ul { width: 100%; }
+div#invoices_addresses { 
+    clear: left;
+    float: left;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    width: 100%;
+}
+table.invoice {
+	clear: left;
+    float: left;
+    margin-bottom: 30px;
+    width: 99%;
+}
+div#invoices_addresses table { width:100%; }
+div#invoices_addresses table td { 
+	line-height: 25px;
+    width: 50%; 
+}
+div#invoices_addresses table td.label { padding-left: 100px; }
+div#invoice_footer { text-align:center; }
+div#invoices_addresses table tr:hover td, table.invoice tr:hover td { background-color:inherit; }
+table.invoice th {
+	border:1px solid #000000;
+	padding: 3px 15px 3px 10px;
+}
+table.invoice td { padding: 3px 10px; }
+table.invoice tr.invoice-table-space td { padding: 0; line-height: 7px; }
+table.invoice tr.border td {
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+}
+table.invoice tr.bottom td {
+	border-bottom:1px solid #000000;
+}
+table.invoice tr td.bottom {
+	border-bottom:1px solid #000000;
+}
+table.invoice tr td.label {
+	text-align:right;
+}
+.align_right {
+	text-align:right;
+}
+div#info_pad { 
+	clear: left;
+    float: left;
+    height: 650px; 
+}
+#invoice_send_header ul li {
+	float:left;
+	clear:left;
+}
+#invoice_send_header ul li span.label {
+    background-color: #D9D9D9;
+    border-radius: 10px 10px 10px 10px;
+    float: left;
+    font-family: OpenSansSemiBold;
+    font-size: 12px;
+    margin-right: 15px;
+    margin-top: 5px;
+    padding: 0 10px;
+    text-align: center;
+    width: 60px;
+}
+#invoice_send_header {
+	background-color:#ededed;
+    float: left;
+    width: 100%;
+}
+#invoice_send_header_container {
+	float: left;
+    padding: 10px 20px;
+    width:90%;
+}
+#invoice_send_header_container input { width:200px; }
+
+.ui-dialog .ui-dialog-content { padding:0; }
+img.more_info {
+	width:15px;
+	height:15px;
+}
+div.ajax-loader {
+	display:none;
+}
+div.ajax-loader img {
+	height: 20px;
+    margin: 0 0 5px 5px;
+    width: 20px;
+}
+div.ajax_loader_schedule {
+	background-color: #FFFFFF;
+	display:none;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+div.ajax_loader_schedule img {
+	display: block;
+    height: 100px;
+    margin: 100px auto auto;
+    width: 100px;
+}
+div#data_bank { display:none; }
+/*
+div#time-end-select-container, div.time-end-select-container {
+	background-color: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 5px #666666;
+    display: none;
+    position: absolute;
+    right: -135px;
+    text-align: center;
+    top: -56px;
+    width: 215px;
+    z-index: 100;
+}
+div#time-end-select-container.static, div.time-end-select-container.static {
+	 height:240px;
+}
+table#time-end-select, table.time-end-select { 
+	float: left;
+    font-size: 11px;
+    line-height: 20px;
+    margin: 10px 0 10px;
+    width: 215px;
+}
+*/
+.gm-style div.google_marker_content {
+	width:170px;
+	font-size:10px;
+}
+.gm-style div.google_marker_content p {
+	margin-bottom:5px;
+}
+div#add_note_container {
+    float: right;
+    margin: 10px 0;
+    width: 100%;
+}
+div#add_note_container input#CustomerNotesNew {
+    width:70%;
+}
+div#add_note_container a, div#add_note_container input {
+    float: right;
+}
+div#add_note_container div#add_note_input_container {
+    display: none;
+    float: right;
+    width: 100%;
+}
+div.modal_box {
+	border:2px solid #dddddd;
+	background-color:#efefef;
+	position:absolute;
+	z-index:500;
+	border-radius:5px;
+	-moz-box-shadow:    1px 1px 6px rgba(0, 0, 0, 0.5);
+  	-webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  	box-shadow:         1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+div#add-time-log-container {
+    /*height: 600px;*/
+    top: 10px;
+ 	width:930px;
+}
+div#add-time-log-container h3.label {
+    margin:15px 0 0 20px;
+}
+div#select-session-container {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px 8px 8px 8px;
+    float: left;
+    height: 175px;
+    width: 100%;
+}
+div.col-timesheet-1, div.col-timesheet-2 {
+	float:left;
+	width:49%;
+}
+div.col-timesheet-2 {
+	margin-left:2%;
+}
+div#timesheet-hours { float:left; margin-bottom:10px; }
+div#timesheet-hours div { float:left; margin-right:20px; }
+div#select-session-container td.line-item {
+	font-size:10px;
+}
+div#schedule_session_container, div#schedule_session_time_container { width:100%; }
+div.schedule_session_data_bank { display:hidden; }
+div#schedule_session_input_container {
+	padding:20px 20px 20px 20px;
+	float:left;
+	width:890px;
+}
+div#schedule_session_input_container textarea {
+	width: 360px; 
+	height: 80px;
+}
+form.standard.scheduleJobForm label, div#update_schedule_session_time_container { width:100%; }
+div.modal-container {
+	display: block;
+    position: absolute;
+}
+div#material_select_container, 
+div#material_input_container, 
+div#equipment_input_container,
+div#schedule_session_time_container, 
+div#schedule_session_materials_container,
+div#job_info_description_container, 
+div#order_line_item_container, 
+div#update_schedule_session_time_container { float:left; }
+div#schedule_session_time_navigation {
+	float: right;
+    margin: 0 20px 10px 0;
+}
+a.add_more { margin: 3px 0 20px; }
+div#order_line_item_container div.input.checkbox { margin-bottom: 2px; }
+div#job_info_description_container label {
+	display: inline-block;
+    float: left;
+    width: 110px;
+}
+div#selected_schedule_action { position:relative; }
+div#schedule_session_container fieldset a {
+	bottom: 0;
+    position: absolute;
+    right: 0;
+    margin: 0 20px 10px 0;
+}
+div.category-header div { float:left; }
+div.category-header div.action,
+div.category-header div.action div.materials_button {
+	float:right;
+}
+div.category-header div.action { margin: 6px 0 6px 0; }
+div.category-header div.name { margin: 9px 0 9px 10px; }
+div.category-header div.action div.materials_button { margin:0 10px 0 20px; }
+table.material tr td.large { width:50% }
+table.material tr td.small { width:20% }
+div.category_table_container, div.alert_table_container { display:none; }
+div.alert_table_container { margin-top:10px; }
+table.material tr td.action img { 
+	float: right;
+    margin-right: 9px;
+    margin-top: 5px; 
+}
+table.material tr:last-child td {
+    border: none;
+}
+.materials_button.collapse, div.alerts_button.collapse {
+	background-image: url('../../img/button-arrow-right.png');
+	background-size:7px 10px;
+	background-position: center;
+}
+.materials_button.expand, div.alerts_button.expand {
+	background-image: url('../../img/button-arrow-down.png');
+	background-size:10px 7px;
+	background-position: center;
+}
+.alert_row {
+	background-color: #FFFFFF;
+    margin-top: 5px;
+    padding: 10px;
+}
+div#outsource_container {
+    top: -23px;
+}

@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+#wrapper {
+	width: 666px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	background-color: #ffffff;
+	min-height: 100px;
+}
+
+#header {
+	width: 100%;
+	border-bottom: 1px solid #ffffff;
+}
+
+#header .title { width: 100%; }
+#body { width: auto; padding: 100px 40px 40px 40px; }
+div.splash div.response-msg {
+    right: 5px;
+    top: 5px;
+    border: none;
+	-moz-box-shadow:    0 0 0 rgba(0, 0, 0, 0);
+  	-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  	box-shadow:         0 0 0 rgba(0, 0, 0, 0);
+}
+#login {
+	width: 330px;
+	display: block;
+	overflow: hidden;
+	margin: auto;
+}
+
+form {
+	margin-bottom: 20px;
+}
+
+div.response-msg {
+	margin: 0 0 20px 0;
+}

@@ -1,0 +1,3 @@
+<?php echo $this->Form->hidden('quote_minimum_days_to_job_start', array('id' => 'quote_minimum_days_to_job_start', 'value' => QUOTE_REQUEST_DATE_COMPLETE_MINIMUM_DAYS)); ?>
+<?php echo $this->Form->hidden('quote_minimum_days_to_quote_due', array('id' => 'quote_minimum_days_to_quote_due', 'value' => QUOTE_REQUEST_DATE_MINIMUM_DAYS)); ?>
+<?php echo $this->Html->script('creationsite/quote.datepicker.init', false); ?>

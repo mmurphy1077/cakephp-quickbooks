@@ -1,0 +1,633 @@
+/* This work is licensed under the Creative Commons Attribution-NoDerivs 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nd/3.0/. */
+
+	/*	DEFAULT TEXT STYLING
+	---------------------------------------------------------------------------------------
+		By default, all elements (including headings) are 
+		set to inherit text styling from their parent
+		In order to keep styling separate from document structure
+		it is recommended NOT to apply styling directly to
+		headings etc., but instead to their containers, or using classes and ids
+	*/
+
+	body{
+		font-family			: helvetica,arial,sans-serif;
+		font-size			: 12px;
+		color				: #333;
+		line-height			: 1.5em;
+		font-weight			: normal;
+		text-decoration 	: none;
+	}
+	
+	ul.bullet-list{
+		list-style-type		: disc;
+		padding-left		: 2em;
+	}
+	ul.bullet-list ul{
+		list-style-type		: circle;
+		padding-left		: 2em;
+	}
+	ul.bullet-list ul ul{
+		list-style-type		: square;
+		padding-left		: 2em;
+	}
+	ul.bullet-list ul ul ul{
+		list-style-type		: disc;
+		padding-left		: 2em;
+	}
+	
+	ol.ordered-list{
+		list-style-type		: decimal;
+		padding-left		: 2em;
+	}
+	ol.ordered-list ol{
+		list-style-type		: lower-alpha;
+		padding-left		: 2em;
+	}
+	ol.ordered-list ol ol{
+		list-style-type		: lower-roman;
+		padding-left		: 2em;
+	}
+	
+	ol.multi-level-list{
+		padding-left		: 1em;
+		counter-reset		: ol-level1;
+	}
+	ol.multi-level-list > li{
+		counter-increment	: ol-level1;
+	}
+	ol.multi-level-list ol{
+		padding-left		: 2em;
+		counter-reset		: ol-level2;
+	}
+	ol.multi-level-list ol > li{
+		counter-increment	: ol-level2;
+	}
+	ol.multi-level-list ol ol{
+		padding-left		: 3em;
+		counter-reset		: ol-level3;
+	}
+	ol.multi-level-list ol ol > li{
+		counter-increment	: ol-level3;
+	}
+	ol.multi-level-list > li:before{
+		content				: counter(ol-level1) ". ";
+	}
+	ol.multi-level-list ol > li:before{
+		content				: counter(ol-level1) "." counter(ol-level2) ". ";
+	}
+	ol.multi-level-list ol ol > li:before{
+		content				: counter(ol-level1) "." counter(ol-level2) "." counter(ol-level3) ". ";
+	}
+
+	
+	/*	PAGE WIDTHS AND POSITIONING
+	---------------------------------------------------------------------------------------
+		The minimum width of the main containers should
+		be the same as the width of the wraps in order
+		to force their backgrounds to span the full width
+		even in case of horizontal scroll
+		
+		In order to assure proper rendering on mobile devices
+		the viewport width should ideally be set to the same
+		or slightly wider
+	*/
+
+	/* center all content at once */
+	/*
+	body{
+		min-width	: 960px;
+	}
+	#wrap{
+		width		: 960px;
+		margin		: 0px auto !important;
+	}
+	*/
+	
+	/* center wrapped content */
+	body,
+	#wrap,
+	#wrap > .grid > *{
+		min-width	: 960px;
+	}
+	.wrap{
+		width		: 960px;
+		margin-right: auto !important;
+		margin-left	: auto !important;
+	}
+
+	
+
+	/*	GRID SPACING
+	---------------------------------------------------------------------------------------
+		set the margins that define the gutters (gutter = 2 times the set margin);
+		apply negative margins to the grid --equal, in absolute value, to the column
+		margins-- in order to cancel-out the margins of its outer-most children;
+		this is particularly important in the case of nested grids, where the outer-most
+		children of a nested grid should typically be aligned with the
+		other children of the parent grid
+	*/
+
+	
+	/* top-level grid */
+	#wrap > .grid > * > *	{ margin : 0px; }
+	#wrap > .grid		{ margin : 0px; }
+	
+	/* subsequent grids */
+	#wrap .wrap .grid > * > *	{ margin : 20px; }
+	#wrap .wrap .grid		{ margin :-20px; }
+	
+	#branding{
+		margin			: 70px 0;
+	}
+	#header{
+		padding-bottom	: 30px !important;
+	}
+	#nav{
+		padding			: 10px 0 60px 0 !important;
+	}
+	#main > .wrap > *{
+		padding-bottom	: 70px !important;
+	}
+	#footer > *{
+		padding-bottom	: 200px;
+	}
+	
+	
+	/*	OPTIONALLY UNHIDE HORIZONTAL OVERFLOW
+	---------------------------------------------------------------------------------------
+	*/
+	
+	.grid > * > *{
+		overflow:visible !important;
+	}
+	
+	
+	/*	TOP GRID STYLING
+	---------------------------------------------------------------------------------------
+	*/
+	body{
+		background		: #357;
+	}
+	#header,
+	#nav,
+	#main,
+	#branding,
+	.centered-heading > *{
+		background		: #fafbfc;
+/		background-image: url('../img/noise.png');
+	}
+	#main{
+		border-bottom	: 1px solid #aaabac !important;
+	}
+	#footer{
+		border-top		: 1px solid #eaebec !important;
+	}
+	
+
+	
+	/*	GRID STYLING
+	---------------------------------------------------------------------------------------
+	*/
+	
+	/* grid style 0 */
+	.grid-style0{
+		font-size			: 17px;
+		line-height			: 30px;
+	}
+	.grid-style0 > *{
+	}
+	.grid-style0 > * > *{
+		margin				: 40px 0px 40px 0px;
+	}
+	.grid-style0{
+		margin				: -40px 0px 0px 0px;
+	}
+	.grid-style0 p{
+		margin				: 30px 0;
+	}
+	.grid-style0 em{
+		font-weight			: bold;
+	}
+	.grid-style0 .heading{
+		font-style			: normal;
+		text-transform		: uppercase;
+		letter-spacing		: 2px;
+		border-bottom		: 1px solid #CACBCC;
+		margin				: 50px 0 30px 0;
+		color				: #9A9C9F;
+		opacity				: .99;
+	}
+	
+	/* grid style 1 */
+	.grid-style1{
+		margin			: -20px -10px !important;
+	} 
+	.grid-style1 > * > *{
+		margin			: 20px 10px !important;
+	} 
+	.grid-style1 > * > *{
+		border			: 1px solid #ddd;
+		border-right	: 1px solid #ccc;
+		border-bottom	: 1px solid #ccc;
+		padding			: 10px;
+		background		: #fff;
+		overflow		: none;
+		-webkit-box-shadow : 1px 1px 1px rgba(0,0,0,0.1);
+		border-radius	: 2px;
+		font-family		: Georgia,Times,Serif;
+	} 
+	.grid-style1 .heading{
+		color			: #333;
+		font-size		: 14px;
+		line-height		: 20px;
+		font-weight		: bold;
+		text-transform	: none;
+		letter-spacing	: 0;
+		margin			: 0 !important;
+		border-bottom	: 1px dashed #dadbdc;
+		background		: url('../img/check.png') no-repeat;
+		padding			: 5px 0px 10px 30px;
+	} 
+	.grid-style1 .content{
+		font-size		: 12px;
+		line-height		: 20px;
+		margin			: 20px 0 !important;
+	}
+	
+	/* grid style 2 */
+	.grid-style2{
+		font-size		: 12px;
+		line-height		: 30px;
+/		font-family		: georgia, times, serif;
+/		font-style		: italic;
+	} 
+	.grid-style2 > * > *{
+		padding			: 20px 0 !important;
+/		border			: 1px solid #919c9f;
+		border-top		: none;
+		border-bottom	: none;
+/		background		: rgba(0,0,0,.1);
+	}
+	.grid-style2 .heading{
+		font-family		: helvetica, arial, sans-serif;
+		font-style		: normal;
+		text-transform	: uppercase;
+		letter-spacing	: 2px;
+		border-bottom	: 1px solid #579;
+		margin-bottom	: 10px;
+		color			: #abc;
+	}
+
+	
+
+	.grid-style4{
+		font-size			: 12px;
+		line-height			: 16px;
+	}
+	.grid-style4 .caption{
+		font-size			: 12px;
+		font-style			: italic;
+		margin-top			: 5px;
+		text-align			: center;
+	}
+	
+	.grid-demo,
+	.grid-demo .grid{
+		font-family			: monospace;
+		font-size			: 11px;
+		text-align			: center;
+		margin				:-5px !important;
+		overflow			: hidden !important;
+	}
+	.grid-demo > * > *,
+	.grid-demo .grid > * > *,
+	.grid-demo .grid .grid > * > *{
+		margin				: 5px !important;
+		background			: #eaebec;
+		overflow			: hidden !important;
+	}
+	.grid-demo .grid > * > *{
+		background			: #cacbcc;
+	}
+	.grid-demo .grid .grid > * > *{
+		background			: #aaabac;
+	}
+	
+	
+	.demo-settings{
+		margin-left		:-20px;
+	}
+	.demo-settings label{
+		margin-left		: 20px;
+		font-size		: 12px;
+	}
+	.demo-settings button,
+	.demo-settings input[type='number']{
+		outline				: none;
+    	border				: 1px solid #aaabac;
+		border-radius		: 2px;
+		background			: #fafbfc;
+		color				: #555;
+		box-shadow			: #cacbcc 0px 2px 4px inset;
+		-webkit-box-shadow	: #cacbcc 0px 2px 4px inset;
+		max-width			: 50px;
+		width				: auto !important;
+		height				: 30px;
+		padding				: 0 5px;
+		text-align			: center !important;
+	}
+	.demo-settings button{
+		box-shadow			: #cacbcc -1px -2px 4px inset;
+		-webkit-box-shadow	: #cacbcc -1px -2px 4px inset;
+		height				: 32px;
+		background			: #eaebec;
+		margin				: 0 1px;
+		vertical-align		: bottom;
+	}
+	.demo-settings button.decr{
+		border-radius		: 50px 10px 10px 50px;
+	}
+	.demo-settings button.incr{
+		border-radius		: 10px 50px 50px 10px;
+	}
+	.demo-settings input[type='checkbox']{
+		vertical-align		: middle;
+		height				: 15px;
+	}
+	
+
+	/*	cross-browser jQuery spinner
+	---------------------------------------------------------------------------------------
+	*/
+	.ui-spinner{
+		display				: inline-block;
+		vertical-align		: top;
+		height				: 32px;
+	}
+	.ui-spinner-buttons{
+		height				: 32px;
+		width				: 15px;
+		display				: block;
+	}
+	.ui-spinner-up,
+	.ui-spinner-down{
+		background-color	: #cacbcc;
+		box-shadow			: #aaabac -1px -2px 4px inset;
+		-webkit-box-shadow	: #aaabac -1px -2px 4px inset;
+    	border				: 1px solid #9a9b9c;
+		outline				: none;
+		border-radius		: 2px;
+		color				: #555;
+		cursor				: pointer;
+		height				: 14px;
+		width				: 14px;
+		line-height			: 15px;
+		text-align			: center;
+		font-weight			: bold;
+		position			: absolute;
+		left				: -1px;
+	}
+	.ui-spinner-up{
+		top					: 0px;
+	}
+	.ui-spinner-down{
+		bottom				: 0px;
+	}
+	.ui-state-hover{
+		background-color	: #eaebec;
+	}
+	.ui-state-active{
+		background-color	: #9a9b9c;
+		box-shadow			: #555 1px 2px 4px inset;
+		-webkit-box-shadow	: #555 1px 2px 4px inset;
+	}
+
+	
+	/*	HEADER STYLING
+	---------------------------------------------------------------------------------------
+	*/
+	#branding{
+		font-family			: Georgia,Times,Serif;
+		font-style			: italic;
+		text-shadow			: 1px 1px 1px rgba(0,0,0,.2);
+		font-size			: 50px;
+		line-height			: 40px;
+		font-weight			: bold;
+	}
+	#branding span{
+		display				: none;
+	}
+	.centered-heading{
+		text-align			: center;
+		border-bottom		: 1px solid #9A9C9F;
+		height				: 25px;
+		margin-bottom		: 15px;
+	}
+	.centered-heading > *{
+		display				: inline-block;
+		padding				: 0 20px 0 15px;
+	}
+	
+	#headline{
+		font-size			: 30px;
+		letter-spacing		: 1px;
+		line-height			: 50px;
+		color				: #9a9c9f;
+		font-weight			: bold;
+		text-transform		: uppercase;
+		text-shadow			: 1px 1px 1px #fff;
+	} 
+	#headline em{
+		color				: #7a7c7f;
+		border-bottom		: 1px dotted #abacad;
+	}
+	.headline{
+		display				: none;
+	}
+	
+	
+	/*	NAV STYLING
+	---------------------------------------------------------------------------------------
+	*/
+	#nav a,
+	.download-button{
+		padding				: 20px 20px;
+		border-radius		: 50px;
+		-webkit-transition	: all .5s;
+		background			: #eaebec;
+		text-align			: center;
+		font-family			: Georgia,Times,Serif;
+		font-style			: italic;
+		font-size			: 20px;
+		line-height			: 25px;
+		}
+	#nav a:hover{
+		background			: #cacbcc;
+	}
+	
+	.download-button{
+		background			: #0c1 !important;
+		color				: #fff;
+		text-shadow			: -1px -1px 1px rgba(0,0,0,.5);
+	}
+	.download-button:hover{
+		background			: #0a1 !important;
+	}
+
+	#nav a.active{
+		background			: #579 !important;
+		text-shadow			: -1px -1px 1px rgba(0,0,0,.5);
+		color				: white;
+	}
+	
+	#nav.sticky{
+		z-index				: 2000;
+		position			: fixed;
+		top					: 0;
+		left				: 0;
+		-webkit-transition	: background-color 1s;
+		-webkit-transition	: -webkit-box-shadow 1s;
+		background-color	: #f5f6f7;
+		-webkit-box-shadow	: 0 0 5px rgba(0,0,0,.5);
+		padding-bottom		: 10px !important;
+	}
+	#nav.sticky a{
+		-webkit-transition	: padding .3s;
+/		padding				: 5px 20px;
+	}
+	#sticky-nav-placeholder{
+		height				: 0;
+		background			: #fafbfc;
+	}
+
+	/*	DETAILS BODY STYLING
+	---------------------------------------------------------------------------------------
+	*/
+
+	
+	
+	/*	FOOTER STYLING
+	---------------------------------------------------------------------------------------
+	*/
+
+	#footer{
+		color			: #eaebec;
+		font-size		: 10px;
+	}
+	#footer a{
+		border-bottom	: 1px dotted #aaabac;
+	}
+	
+	
+
+	/*	FORM LAYOUT & STYLING
+	---------------------------------------------------------------------------------------
+	*/
+
+	.form-style1 button,
+	.form-style1 input[type=text],
+	.form-style1 textarea{
+		font-size		: 17px;
+		line-height		: 22px;
+		letter-spacing	: 1px;
+		outline			: none;
+    	border			: 1px solid #fff;
+		border-radius	: 2px;
+		padding			: 5px;
+		margin			: 7px 0;
+		background		: #fafbfc;
+		color			: #555;
+		width			: 90%;
+		box-shadow:
+			#cacbcc 0px 2px 4px inset;
+		-webkit-box-shadow:
+			#cacbcc 0px 2px 4px inset;
+	}
+	.placeholder,
+	.form-style1 ::input-placeholder,
+	.form-style1 ::-webkit-input-placeholder,
+	.form-style1 ::-moz-input-placeholder{
+		color			: #999;
+		font-style		: italic;
+		line-height		: 25px;
+	}
+	.form-style1 textarea{
+		min-height		: 50px;
+		width			: 90%;
+		line-height		: 150%;
+	}
+	.form-style1 textarea:focus,
+	.form-style1 input[type=text]:focus{
+		background		: #fff;
+		box-shadow:
+			#dadbdc 0px 2px 4px inset;
+		-webkit-box-shadow:
+			#dadbdc 0px 2px 4px inset;
+		outline			: 4px red;
+	}
+
+	.form-style1 button{
+    	border			: 1px solid #bbb;
+		border-radius	: 5px;
+		padding			: 10px 20px;
+		background-color: #ccc;
+		width			: auto;
+		font-size		: 18px;
+		text-shadow		: 1px 1px rgba(255,255,255,0.5);
+		cursor			: pointer;
+		line-height		: 16px;
+		}
+
+		
+	/*	STYLING OF CODE/MARKUP
+	---------------------------------------------------------------------------------------
+	*/
+	.code{
+		font-family			: monospace;
+		color				: #555;
+	}
+	div.code{
+		background			: #eee;
+		border				: 1px solid #ccc;
+		border-radius		: 2px;
+		padding				: 10px 0;
+	}
+	.code .nl{
+		margin-left			: 2em;
+	}
+	.code.grid-container,
+	.code.grid-container.val,
+	.code .nl .tag,
+	.code .nl .val,
+	.code .nl .nl .nl .nl .tag,
+	.code .nl .nl .nl .nl .val{
+		color				: #00f;
+	}
+	.code.grid-unit,
+	.code .nl .nl .tag,
+	.code .nl .nl .val,
+	.code .nl .nl .nl .nl .nl .tag,
+	.code .nl .nl .nl .nl .nl .val{
+		color				: #a0a;
+	}
+	.code.content-wrapper,
+	.code .nl .nl .nl .tag,
+	.code .nl .nl .nl .val,
+	.code .nl .nl .nl .nl .nl .nl .tag,
+	.code .nl .nl .nl .nl .nl .nl .val{
+		color				: #f00;
+	}
+	.code .attr{
+		color				: #555;
+	}
+	.code.val,
+	.code .attr .val{
+		font-weight			: bold;
+	}
+	.code.text,
+	.code .text{
+		color				: #000;
+	}
+	
+	
+		

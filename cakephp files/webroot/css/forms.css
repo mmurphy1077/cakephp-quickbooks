@@ -1,0 +1,528 @@
+@CHARSET "UTF-8";
+
+
+.ui-widget-content .widget form {
+	margin-bottom: 0;
+}
+
+.widget form label {
+	display: block;
+}
+
+.widget .grid.flat label {
+	display: inline;
+	margin-right: 5px;
+}
+
+.widget form input {
+}
+
+.widget form .input.short input { width: 75px; }
+.widget form .input.short.date input,
+form.standard .input.short.date input { width: 85px; }
+.widget form .input.currency input {
+	/* Use dollar sign as background image */
+}
+
+.widget form .grid div.submit {
+	margin-left: 5px;
+}
+div.label {
+	clear:left;
+	color: #277EA8;
+    float: left;
+    margin-right: 1%;
+    border-radius: 0.25em;
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    /*padding: inherit;*/
+    padding:0 0 0 2px;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+div.label.pad { width: 80px; text-align: right; }
+div.label.no-pad { padding:0; }
+div.label.inline { padding-left:0; }
+/*
+form div.required label {
+	font-family: OpenSansBold;
+	color: #0a435e;
+}
+*/
+form div.submit input {
+	border: none;
+	border-radius: 2px;
+	padding: 4px 25px;
+	background-color: #32a7e0;
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 13px;
+	font-family: OpenSans;
+}
+form div.title-buttons div.submit input,
+form div.submit input.title-buttons {
+	/*
+	border-radius: 4px;
+	padding: 6px 10px 6px 10px;
+	margin:17px 0 0 1px;
+	min-width:100px;
+	*/
+	border: none;
+	color: #FFFFFF;
+	cursor:pointer;
+	background-color: #32A7E0;
+	min-width: 100px;
+	float: right;
+    /* margin: 15px 0 0 1px; */
+    margin: 0;
+    border-radius: 0;
+    display: block;
+    padding: 4px 10px;
+    text-align: center;
+}
+
+form div.submit input#message-send.title-buttons { margin: 0; }
+form textarea,
+form select,
+form input, 
+/*form a.button,*/
+form.standard .combobox input, 
+form.standard select, 
+form.standard input {
+	border: 1px solid #CCCCCC;
+	border-radius: 4px 4px 4px 4px;
+	font: 13px/1.5 OpenSans;
+	margin: 0;
+	padding: 6px;
+	background-color: #ffffff;
+}
+/* div#wrapper.field form label,
+div#wrapper.field form .label, */
+div#wrapper.field form textarea,
+div#wrapper.field form select,
+div#wrapper.field form input, 
+div#wrapper.field form.standard .combobox input, 
+div#wrapper.field form.standard select, 
+div#wrapper.field form.standard input {
+	font-size: 18px;
+}
+div#wrapper.field form input[type=date] { width:100%; } 
+div#wrapper.field form.standard input[type=submit] { font-size: inherit; }
+
+.combobox .ui-widget {
+    font-family: OpenSans;
+    font-size: 13px;
+}
+.combobox .ui-widget.ui-button-icon-only {
+	font-size: 12px;
+}
+
+.combobox button {
+    border: medium none;
+    margin-left: -2.5em;
+}
+button.ui-button {
+	border: medium none;
+    border-radius: 4px;
+    margin-left: -2.5em;
+    padding: 2px;
+    top:-1px;
+}
+
+form .input.radio fieldset {
+	display: block;
+	margin-bottom: 10px;
+}
+
+form div.input.checkbox {
+	overflow: hidden;
+	width: 100%;
+}
+
+form div.input.checkbox input {
+	width: auto;
+	float: left;
+}
+
+form div.input.checkbox div.checkbox {
+	width: 50%;
+	overflow: hidden;
+	float: left;
+}
+
+form div.input.checkbox label {
+	width: auto;
+	float: left;
+	/*margin-left: 3px;*/
+}
+
+form div.submit { clear: both; display: inline; }
+fieldset.no-form, form.standard fieldset, fieldset {
+	background: none repeat scroll 0 0 #efefef;
+	border: medium none;
+	border-radius: 8px;
+	margin-bottom: 1.5em;
+	padding-bottom: 10px;
+	position: relative;
+}
+form.standard fieldset div.fieldset-wrapper.available_action_container, fieldset div.fieldset-wrapper.available_action_container { padding: 25px 24px 12px; }
+
+form.standard fieldset.modal {
+	background-color:#ffffff;
+}
+
+form.standard fieldset div.fieldset-wrapper {
+	padding: 25px 25px 0;
+}
+
+fieldset.no-form div.fieldset-wrapper {
+	padding: 25px 25px 15px 25px;
+}
+
+form.standard .input.radio fieldset input,
+form .input.radio fieldset input {
+	clear: both;
+	float: left;
+	margin-right: 10px;
+	width: auto;
+}
+
+form.standard .input.radio fieldset label,
+form .input.radio fieldset label {
+	color: #777777;
+}
+
+.location form input {
+	font-size: 12px;
+	font-family: OpenSans;
+	border-radius: 10px;
+	padding: 2px 10px 2px 10px;
+	border: 1px solid #ffffff;
+	float: right;
+	margin-right: 5px;
+	width: 230px;
+}
+
+.location form div.submit input {
+	float: right;
+	background-color: #277ea8;
+	margin-right: 20px;
+	width: auto;
+	font-size: 12px;
+}
+
+form.standard div.input {
+	width: 100%;
+	margin-bottom: 10px;
+	clear: both;
+}
+form.standard div.input.select.combo-select { top: -9px; }
+form.standard div#email_attachment_container div.input.checkbox { margin-bottom: 1px; }
+textarea.tall_text { height:350px; }
+textarea.medium_text { height:200px; }
+form.standard div.input input.size-negative { width: 20%; } 
+form.standard textarea,
+form.standard div.input input { width: 80%; }
+form.standard div.input select { width: 80%; }
+form.standard div.input input.ui-autocomplete-input { width: 80%; }
+
+form.standard div.textarea.large textarea,
+form.standard textarea.large,
+form.standard textarea.wide,
+form.standard div.textarea.wide textarea,
+form.wide textarea,
+form.wide div.input select,
+form.wide div.input input { width: 95%; }
+form.standard textarea.full,
+form.standard div.input input.full, input.full { width: 100%; }
+form.standard div.input.short select,
+form.standard div.input.short input { width: 15%; }
+form.standard div.input.medium select,
+form.standard div.input.medium input { width: 40%; }
+
+form div.textarea.tall textarea, form.standard textarea.height-tall { height: 400px; }
+form.standard textarea.height-med { height: 200px; }
+form div.textarea textarea.main-message { height: 300px; }
+form.standard div.radio fieldset legend,
+form.standard label {
+	/*
+	width: 20%;
+	float: left;
+	margin-right: 1%;
+	*/
+	color: #277ea8;
+	font-weight: inherit;
+    margin-bottom: inherit;
+}
+
+form.standard .input.radio {
+	padding-left: 25%;
+}
+
+fieldset.required,
+fieldset.optional {
+	width: auto;
+	padding: 10px;
+	background-color: #e8f6fc;
+	margin-bottom: 20px;
+	border: 1px solid #abd3e8;
+	border-radius: 10px;
+}
+
+fieldset.optional {
+	background-color: #efefef;
+	border-color: #cccccc;
+}
+
+fieldset.required legend,
+fieldset.optional legend {
+	background-color: #abd3e8;
+	padding: 5px 10px 5px 10px;
+	border-radius: 10px;
+	font-size: 11px;
+	color: #277ea8;
+}
+
+fieldset.required legend {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+fieldset.required select,
+fieldset.required input {
+	color: #277ea8;
+	background-color: #abd3e8;
+	border-color: #ffffff;
+}
+
+fieldset.optional select,
+fieldset.optional input {
+	color: #666666;
+	background-color: #cccccc;
+	border-color: #ffffff;
+}
+
+form.standard fieldset.buttons {
+	padding: 0;
+	margin: 0;
+	background: none;
+	margin-top: 20px;
+}
+
+fieldset.buttons div.submit {
+	clear: none;
+}
+
+fieldset.buttons input {
+	float: left;
+	margin-right: 10px;
+}
+h4 { padding: 0 0 10px 10px; /*margin-top: 20px;*/ }
+h4 { margin-top: 0; }
+h4 {
+	display: block;
+	clear: both;
+	color: #000000;
+	font-family: OpenSansBold;
+	font-size: 18px;
+	margin: 0 0 20px 0;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #cccccc;
+}
+
+form .input span.note {
+	padding-left: 10px;
+	font-size: 12px;
+	color: #666666;
+}
+
+form.fancy {
+	width: 280px;
+	display: block;
+	margin: auto;
+}
+
+form.fancy .input {
+	margin-bottom: 20px;
+	width: 300px;
+}
+
+form.fancy label {
+	display: block;
+	font-size: 13px;
+	font-family: OpenSansSemiBold;
+	color: #ffffff;
+	padding-bottom: 5px;
+}
+
+form.fancy .input password,
+form.fancy .input input {
+	border-radius: 10px;
+	border: none;
+	width: 260px;
+	padding: 5px 10px 5px 10px;
+	box-shadow: 2px 2px 2px 2px #2886b3;
+	color: #000000;
+}
+
+form.fancy div.submit input {
+	background-color: #000000;
+	padding: 5px 20px 5px 20px;
+}
+
+#login form div.input {
+	width: 330px;
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+#login form div.input input {
+	padding: 5px;
+	width: 318px;
+}
+
+#login form div.input.checkbox input { width: auto; }
+
+#login form div.submit input {
+	padding: 5px 24px 5px 24px;
+	font-size: 18px;
+	border-radius: 0;
+}
+
+.ui-buttonset fieldset legend,
+form.standard div.radio fieldset legend,
+form.standard label,
+form.standard div.checkbox.label_space_left label {
+	width: 20%;
+	float: left;
+	margin-right: 0;
+	/*margin-right: 1%;*/
+	color: #277ea8;
+}
+form.standard div#invoice-status label { width: 95px; }
+form.standard label.full { width:100%; }
+label.ui-button { min-width:50px; /*max-width:75px;*/ }
+label.ui-button.ui-state-active { color:#ffffff; }
+label.ui-button.ui-state-active.ui-button-disabled { background-color:#333333; }
+form.standard div.input.checkbox.label_space_left input[type="checkbox"] { width:auto; }
+form.standard div.input.file input[type="file"] { border:none; }
+.ui-buttonset fieldset label { width: auto; }
+.ui-buttonset fieldset label.ui-state-active span { color: #ffffff; }
+form.standard .ui-buttonset fieldset { margin: 0; padding: 0; }
+.error-message {
+	font-size: 11px;
+	color: #B34C1A;
+	margin-left: 21%;
+	margin-bottom: 10px;
+}
+.error-message.larger_label_space { margin-left: 33%; }
+.error-message.no_label_space { margin-left: 0; }
+form#scheduleJob .error-message {
+	margin-left:2px;
+}
+
+.flush.error-message,
+.flush .error-message {
+	margin-left: 0;
+}
+
+div.delete img {
+	margin-right: 5px;
+}
+
+div.delete.small {
+	font-size: 11px;
+}
+
+form.standard div.input input[type=checkbox],
+form.standard div.input.larger_label_space input[type=checkbox],
+input[type=checkbox].contacts_email_check {
+	margin-top: 3px;
+    width: 30px;
+}
+form.standard input[type=checkbox].auto { width: auto; }
+input.short { width: 20%; }
+input.static.short { width: 90px; }
+.flush-left .error-message { margin-left: 0; }
+form.standard .slim label { line-height: 30px; }
+.widget form.tight div.sort input, form.tight div.sort input { width: 25px; }
+form.tight div.input {
+	margin-right: 10px;
+	width: auto;
+	overflow: hidden;
+	float: left;
+}
+
+form.standard input[type=submit]:disabled,
+form.standard select:disabled,
+form.standard input:disabled,
+form.standard textarea:disabled,
+form.header input:disabled,
+select:disabled,
+input:disabled { background-color: #f4f4f4; cursor: default; }
+form div.submit input.blackpill {
+    background-color: #000000;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    font-family: OpenSansBold;
+    font-size: 11px;
+    margin: 5px 0 0 5px;
+    padding: 2px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+form div.input div.block { width: auto; overflow: hidden; }
+form#SearchIndexIndexForm input { margin-top: 5px; width: 80%; }
+form.search-form input, 
+form#SearchIndexIndexForm input,
+div#table-search-container input {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    font: 13px/1.5 OpenSans;
+    margin: 0 0 0 8px;
+    padding: 1px 20px 1px 10px;
+}
+div#index-filter-types { font-family: OpenSansSemiBold; font-size:12px; }
+div#filter-types { font-family: OpenSansBold; }
+form#SearchIndexIndexForm div.submit {
+    border-radius: 0;
+    position: absolute;
+    right: 19px;
+    top: 4px;
+    z-index: 10;
+}
+form.search-form input[type="image"], form#SearchIndexIndexForm input[type="image"] {
+    background-color: inherit;
+    border: medium none;
+    border-radius: 0;
+    height: 14px;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+}
+a#clear_all_filters { font-family: OpenSansSemiBold; font-size: 11px; margin-right: 20px; }
+form.standard input.required_color, input.required_color { color: #B34C1A; font-family: OpenSansBold; }
+form.standard div.buttonset.white-bckgrd fieldset { background-color: inherit; }
+ul#available_actions_list li.action a, div.header-links a { cursor: pointer; margin: 0 5px; }
+form textarea { height: 60px; }
+form textarea.md { height: 110px; }
+form textarea.lg { height: 270px; }
+form.standard div.buttonset_container.larger_label_space div.buttonset label { width: auto; }
+form.standard div.larger_label_space label, form.standard div.checkbox.larger_label_space label.standard_checkbox, form.standard div.larger_label legend { width: 32%; }
+form.standard div.input.short_plus select, form.standard div.input.short_plus input { width: 20%; }
+form.standard div.textarea.larger_label_space textarea, form.standard div.input.larger_label_space input { width: 60%; }
+input.qty_input, form.standard div.input input.qty_input, form.standard div.input.larger_label_space input.qty_input { width:70px; }
+form.standard div.buttonset_container { float: left; }
+form.standard div.input, form.standard div.buttonset_container, form.modal div.input {
+    clear: both;
+    margin-bottom: 10px;
+    width: 100%;
+}
+form.standard div.input.larger_label_space select, div#report_filter_container form.standard div.input select { width: 62%; }

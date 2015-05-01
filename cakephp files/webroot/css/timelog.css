@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+
+/************************************
+  SCHEDULES
+ ***/
+
+div#time-end-select-container, div.time-end-select-container { width: 190px; height:260px; overflow:auto; }
+div#time-end-select-container, div.time-end-select-container {
+	background-color: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 5px #666666;
+   	display: none;
+    position: absolute;
+    right: -110px;
+    text-align: center;
+    top: -120px;
+    z-index: 50000;
+    overflow:scroll;
+}
+div.timer-container { 
+	background-color:#ffffff;
+	border: 2px solid #cccccc;
+    border-radius: /*4px 4px 4px 4px*/ 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 3px 5px;	
+}
+div.timer-container.active {
+	background-image: url('../img/loader-green.gif');
+	background-color: #ade97c;
+	background-position:center 10px;
+	background-repeat:no-repeat;
+	background-size:16px auto;
+}
+div.timer-container { padding: 16px 20px; /*7px 9px;*/ position: absolute; top: 15px; right: 15px; }
+div.timer-container.active { background-position:center 27px; }
+div.timer-container image { }
+.hide_quarter_slot { display:none; }
+img.icon-arrow { 
+	display: inline-block;
+    margin: 0 0 10px;
+    cursor:pointer;
+}
+img#icon-arrow-up { display:none; }
+table#time-end-select, table.time-end-select, select#time_end_display_work { float: left; line-height: 20px; width: 200px; }
+table#time-end-select tr, select#time_end_display_work option { cursor:pointer; padding: 0 20px 0 20px; }
+table#time-end-select td.first, select#time_end_display_work span.first { font-size:14px; text-align:center; width:25px; } 
+span.time_increment { color:#999999; width:50%; }
+a#timer img { width: 25px; }

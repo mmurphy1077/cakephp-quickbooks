@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST} !^(squires\.my360e\.com|localhost|stage\.creationsite\.com|72\.10\.37\.180)$
+    RewriteRule (.*) http://squires.my360e.com/$1 [R=301,L]
+    RewriteRule    ^$    webroot/    [L]
+    RewriteRule    (.*) webroot/$1    [L]
+</IfModule>
+
+# Set high so application can define max filesizes as needed
+php_value upload_max_filesize 300000000
+php_value memory_limit 1000000000
+php_value max_execution_time 120

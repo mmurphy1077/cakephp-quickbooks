@@ -1,0 +1,168 @@
+<?php
+// QUOTE BY 
+// NO ORDERING
+$total_leads = $data['Lead'][0][0]['lead_inactive'] + $data['Lead'][0][0]['lead_active'] + $data['Lead'][0][0]['lead_became_quoted_customer'];
+$total_quotes = $data['Quote'][0][0]['quote_is_inactive'] + $data['Quote'][0][0]['active_quote'] + $data['Quote'][0][0]['quote_sold'];
+$title = "Sales Snapshot Report";
+
+$html = "";
+$html = $html . '<div id="application_report_container">';
+$html = $html . '	<div id="report_header_container" class="abstract page_element group">';
+$html = $html . '		<div class="company_header">' . $applicationSettings['ApplicationSetting']['company_name'] . '</div>';
+$html = $html . '		<div class="title">' . __($title) . '</div>';
+$html = $html . '		<div class="top_left">' . date('m/d/Y') . '</div>';
+$html = $html . '		<div class="top_right screen_only title-buttons">' . $this->Html->link('Print', array('controller' => 'reports', 'action' => 'print_pdf')) . '</div>';
+$html = $html . '	</div>';
+$html = $html . '	<div id="" class="abstract page_element">';
+$html = $html . '		<div class="snapshot_table_container">';
+$html = $html . '			<table>';
+$html = $html . '				<tr>';
+$html = $html . '					<th colspan="2">Total Number of Leads (active)</th>';
+$html = $html . '					<th class="align-right">' . $data['Lead'][0][0]['lead_active']. '</th>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;&nbsp;&nbsp;</td>';
+$html = $html . '					<td>Unassigned</td>';
+$html = $html . '					<td class="align-right">' . $data['Lead'][0][0]['lead_unassigned']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;&nbsp;&nbsp;</td>';
+$html = $html . '					<td>Assigned</td>';
+$html = $html . '					<td class="align-right">' . $data['Lead'][0][0]['lead_assigned']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;</td>';
+$html = $html . '					<td>No Contact</td>';
+$html = $html . '					<td class="align-right">' . $data['Lead'][0][0]['lead_no_contact']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;</td>';
+$html = $html . '					<td>Contacted</td>';
+$html = $html . '					<td class="align-right">' . $data['Lead'][0][0]['lead_contact_made']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;</td>';
+$html = $html . '					<td>Meeting Scheduled</td>';
+$html = $html . '					<td class="align-right">' . $data['Lead'][0][0]['lead_meeting_scheduled']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;</td>';
+$html = $html . '					<td>No Activity in 30 days</td>';
+$html = $html . '					<td class="align-right">' . $data['Lead'][0][0]['active_no_activity_30_days']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '			</table>';
+$html = $html . '		</div>';
+$html = $html . '	</div>';
+$html = $html . '	<div id="" class="abstract page_element">';
+$html = $html . '		<div class="snapshot_table_container">';
+$html = $html . '			<table>';
+$html = $html . '				<tr>';
+$html = $html . '					<th colspan="2">Total # Quotes (active)</th>';
+$html = $html . '					<th class="align-right">' . $data['Quote'][0][0]['active_quote']. '</th>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;&nbsp;</td>';
+$html = $html . '					<td>New</td>';
+$html = $html . '					<td class="align-right">' . $data['Quote'][0][0]['quote_new_request']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;&nbsp;</td>';
+$html = $html . '					<td>In Process</td>';
+$html = $html . '					<td class="align-right">' . $data['Quote'][0][0]['quote_in_progress']. '</td>';
+$html = $html . '				</tr>';
+/*
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;</td>';
+$html = $html . '					<td>In Revision</td>';
+$html = $html . '					<td class="align-right">' . $data['Quote'][0][0]['quote_in_revision']. '</td>';
+$html = $html . '				</tr>';
+*/
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;</td>';
+$html = $html . '					<td>Past Due</td>';
+$html = $html . '					<td class="align-right">' . $data['Quote'][0][0]['past_due']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;</td>';
+$html = $html . '					<td>Submitted</td>';
+$html = $html . '					<td class="align-right">' . $data['Quote'][0][0]['quote_submitted']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;</td>';
+$html = $html . '					<td>Sold</td>';
+$html = $html . '					<td class="align-right">' . $data['Quote'][0][0]['quote_sold']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<td>&nbsp;</td>';
+$html = $html . '					<td>No Activity in 30 days</td>';
+$html = $html . '					<td class="align-right">' . $data['Quote'][0][0]['active_no_contact_30_days']. '</td>';
+$html = $html . '				</tr>';
+$html = $html . '			</table>';
+$html = $html . '		</div>';
+$html = $html . '	</div>';
+$html = $html . '	<div id="" class="abstract page_element">';
+$html = $html . '		<div class="snapshot_table_container">';
+$html = $html . '			<table>';
+$html = $html . '				<tr>';
+$html = $html . '					<th>Total Quote $  (Outstanding)</th>';
+$html = $html . '					<th class="align-right">$' . number_format($data['Quote'][0][0]['active_quote_amount'], 2, '.', ','). '</th>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<th>Total Sold $</th>';
+$html = $html . '					<th class="align-right">$' . number_format($data['Quote'][0][0]['quote_sold_amount'], 2, '.', ','). '</th>';
+$html = $html . '				</tr>';
+$html = $html . '			</table>';
+$html = $html . '		</div>';
+$html = $html . '	</div>';
+$html = $html . '	<div id="" class="abstract page_element">';
+$html = $html . '		<div class="snapshot_table_container">';
+$html = $html . '			<table>';
+$html = $html . '				<tr>';
+$html = $html . '					<th>Lead-to-Quote Ratio (Volume)</th>';
+$html = $html . '					<th class="align-right">' . $total_leads.'/'.$data['Lead'][0][0]['lead_became_quoted_customer']. ' (' . number_format(($data['Lead'][0][0]['lead_became_quoted_customer']/$total_leads)*100, 2) . '%)</th>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<th>Lead-to-Order Ratio (Volume)</th>';
+$html = $html . '					<th class="align-right">' . $total_leads.'/'.$data['Lead'][0][0]['lead_has_order_associated']. ' (' . number_format(($data['Lead'][0][0]['lead_has_order_associated']/$total_leads)*100, 2) . '%)</th>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<th>Quote-to-Order Ratio (Volume)</th>';
+$html = $html . '					<th class="align-right">';
+if(!empty($total_quotes)) {
+$html = $html . 	 				$data['Lead'][0][0]['lead_to_quote_conversion_days']/$total_quotes;
+} else {
+$html = $html .  					'0';
+} 
+$html = $html . '					</th>';
+$html = $html . '				</tr>';
+$html = $html . '			</table>';
+$html = $html . '		</div>';
+$html = $html . '	</div>';
+$html = $html . '	<div id="" class="abstract page_element">';
+$html = $html . '		<div class="snapshot_table_container">';
+$html = $html . '			<table>';
+$html = $html . '				<tr>';
+$html = $html . '					<th>Avg Turnaround for Lead-to-Quote</th>';
+$html = $html . '					<th class="align-right">';
+if(!empty($data['Lead'][0][0]['lead_has_a_quote'])) {
+$html = $html . 					$data['Lead'][0][0]['lead_to_quote_conversion_days']/$data['Lead'][0][0]['lead_has_a_quote'] . ' days';
+} else {
+$html = $html .  					'0';
+} 
+$html = $html . ' 					 </th>';
+$html = $html . '				</tr>';
+$html = $html . '				<tr>';
+$html = $html . '					<th>Avg. Turnaround for Quote-to-Order</th>';
+$html = $html . '					<th class="align-right">';
+if(!empty($data['Quote'][0][0]['quote_has_an_order'])) {
+$html = $html . 					$data['Quote'][0][0]['quote_to_order_conversion']/$data['Quote'][0][0]['quote_has_an_order'] . ' days';
+} else {
+$html = $html .  					'0';
+} 
+$html = $html . '					 </th>';
+$html = $html . '				</tr>';
+$html = $html . '			</table>';
+$html = $html . '		</div>';
+$html = $html . '	</div>';
+$html = $html . '</div>';
+echo $html;
