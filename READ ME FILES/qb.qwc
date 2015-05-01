@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<QBWCXML>
+  <AppName>QuickBooks Integrator Business 360</AppName>
+  <AppID></AppID>
+  <AppURL>https://creationsite.my360e.com/quickbooks/quickbooks_web_connector</AppURL>
+  <AppDescription>QuickBooks SOAP Server for Business360</AppDescription>
+  <AppSupport>https://creationsite.my360e.com</AppSupport>
+  <UserName>business360quickbooks</UserName>
+  <OwnerID>{90A44FB7-27F3-4815-AC85-166DA7E7D1EB}</OwnerID>
+  <FileID>{67F3C9B6-86F1-4FBB-B1FF-966DE1813D20}</FileID>
+  <QBType>QBFS</QBType>
+  <Scheduler>
+    <RunEveryNMinutes>2</RunEveryNMinutes>
+  </Scheduler>
+  <IsReadOnly>false</IsReadOnly>
+</QBWCXML>
